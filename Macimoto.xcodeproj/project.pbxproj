@@ -73,6 +73,7 @@
 		1919F1DF1C15C4D80071067A /* Macimoto */ = {
 			isa = PBXGroup;
 			children = (
+				19D214981C160A2500941D81 /* AppService */,
 				1919F1F21C15EC6E0071067A /* Libraries */,
 				1919F1E01C15C4D80071067A /* AppDelegate.swift */,
 				1919F1E21C15C4D80071067A /* ViewController.swift */,
@@ -92,6 +93,13 @@
 				1919F1F31C15EC960071067A /* Macimoto-Bridging-Header.h */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		19D214981C160A2500941D81 /* AppService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AppService;
 			sourceTree = "<group>";
 		};
 		58659A5A5008046E7B4FD028 /* Pods */ = {

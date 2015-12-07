@@ -664,12 +664,12 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-1035" y="246"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Macimoto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" userLabel="Login View Controller" customClass="ViewController" customModule="Macimoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -744,6 +744,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" size="16" name=".HelveticaNeueDeskInterface-Regular"/>
                                         </buttonCell>
+                                        <connections>
+                                            <segue destination="R8G-M0-D7p" kind="sheet" id="fgq-H6-IeU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </customView>
@@ -760,7 +763,20 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="1158"/>
+            <point key="canvasLocation" x="-1044" y="1266"/>
+        </scene>
+        <!--Dashboard View Controller-->
+        <scene sceneID="Kez-ac-gC8">
+            <objects>
+                <viewController id="R8G-M0-D7p" userLabel="Dashboard View Controller" sceneMemberID="viewController">
+                    <view key="view" id="npi-9c-hco">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="800"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="FIA-vW-YBg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="1266"/>
         </scene>
     </scenes>
     <resources>
