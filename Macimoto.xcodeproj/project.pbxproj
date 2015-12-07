@@ -13,6 +13,9 @@
 		1919F1E81C15C4D80071067A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1919F1E71C15C4D80071067A /* Assets.xcassets */; };
 		1919F1EB1C15C4D80071067A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1919F1E91C15C4D80071067A /* Main.storyboard */; };
 		1919F1F61C15EC970071067A /* KPCScaleToFillNSImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1919F1F51C15EC970071067A /* KPCScaleToFillNSImageView.m */; };
+		19BE22D71C16412400DE3A94 /* ANUserCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BE22D61C16412400DE3A94 /* ANUserCredentials.m */; };
+		19BE22DA1C16413D00DE3A94 /* ANUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BE22D91C16413D00DE3A94 /* ANUser.m */; };
+		19BE22DD1C16414800DE3A94 /* ANUserCapability.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BE22DC1C16414800DE3A94 /* ANUserCapability.m */; };
 		19D2149D1C160EBB00941D81 /* ANRemoteConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D2149C1C160EBB00941D81 /* ANRemoteConfigManager.m */; };
 		C02CE35C4A2BD6B3DDF7541F /* Pods_Macimoto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C378C9C6F83717A820BA28 /* Pods_Macimoto.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +31,12 @@
 		1919F1F31C15EC960071067A /* Macimoto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Macimoto-Bridging-Header.h"; sourceTree = "<group>"; };
 		1919F1F41C15EC970071067A /* KPCScaleToFillNSImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCScaleToFillNSImageView.h; sourceTree = "<group>"; };
 		1919F1F51C15EC970071067A /* KPCScaleToFillNSImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCScaleToFillNSImageView.m; sourceTree = "<group>"; };
+		19BE22D51C16412400DE3A94 /* ANUserCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANUserCredentials.h; sourceTree = "<group>"; };
+		19BE22D61C16412400DE3A94 /* ANUserCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANUserCredentials.m; sourceTree = "<group>"; };
+		19BE22D81C16413D00DE3A94 /* ANUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANUser.h; sourceTree = "<group>"; };
+		19BE22D91C16413D00DE3A94 /* ANUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANUser.m; sourceTree = "<group>"; };
+		19BE22DB1C16414800DE3A94 /* ANUserCapability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANUserCapability.h; sourceTree = "<group>"; };
+		19BE22DC1C16414800DE3A94 /* ANUserCapability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANUserCapability.m; sourceTree = "<group>"; };
 		19D2149A1C160EBB00941D81 /* ANConfigurationDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANConfigurationDefinition.h; sourceTree = "<group>"; };
 		19D2149B1C160EBB00941D81 /* ANRemoteConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANRemoteConfigManager.h; sourceTree = "<group>"; };
 		19D2149C1C160EBB00941D81 /* ANRemoteConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRemoteConfigManager.m; sourceTree = "<group>"; };
@@ -86,6 +95,7 @@
 				1919F1E91C15C4D80071067A /* Main.storyboard */,
 				1919F1EC1C15C4D80071067A /* Info.plist */,
 				1919F1E41C15C4D80071067A /* Macimoto.xcdatamodeld */,
+				1919F1F31C15EC960071067A /* Macimoto-Bridging-Header.h */,
 			);
 			path = Macimoto;
 			sourceTree = "<group>";
@@ -95,7 +105,6 @@
 			children = (
 				1919F1F41C15EC970071067A /* KPCScaleToFillNSImageView.h */,
 				1919F1F51C15EC970071067A /* KPCScaleToFillNSImageView.m */,
-				1919F1F31C15EC960071067A /* Macimoto-Bridging-Header.h */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -103,6 +112,12 @@
 		19D214981C160A2500941D81 /* AppService */ = {
 			isa = PBXGroup;
 			children = (
+				19BE22D51C16412400DE3A94 /* ANUserCredentials.h */,
+				19BE22D61C16412400DE3A94 /* ANUserCredentials.m */,
+				19BE22D81C16413D00DE3A94 /* ANUser.h */,
+				19BE22D91C16413D00DE3A94 /* ANUser.m */,
+				19BE22DB1C16414800DE3A94 /* ANUserCapability.h */,
+				19BE22DC1C16414800DE3A94 /* ANUserCapability.m */,
 			);
 			name = AppService;
 			sourceTree = "<group>";
@@ -247,9 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BE22DA1C16413D00DE3A94 /* ANUser.m in Sources */,
+				19BE22D71C16412400DE3A94 /* ANUserCredentials.m in Sources */,
 				1919F1E31C15C4D80071067A /* ViewController.swift in Sources */,
 				1919F1F61C15EC970071067A /* KPCScaleToFillNSImageView.m in Sources */,
 				1919F1E61C15C4D80071067A /* Macimoto.xcdatamodeld in Sources */,
+				19BE22DD1C16414800DE3A94 /* ANUserCapability.m in Sources */,
 				1919F1E11C15C4D80071067A /* AppDelegate.swift in Sources */,
 				19D2149D1C160EBB00941D81 /* ANRemoteConfigManager.m in Sources */,
 			);
