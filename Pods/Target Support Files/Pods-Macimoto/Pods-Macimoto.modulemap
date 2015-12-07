@@ -1,0 +1,6 @@
+framework module Pods_Macimoto {
+  umbrella header "Pods-Macimoto-umbrella.h"
+
+  export *
+  module * { export * }
+}
