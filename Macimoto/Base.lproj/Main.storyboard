@@ -722,24 +722,27 @@
                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ha-7f-MJZ">
                                         <rect key="frame" x="20" y="169" width="296" height="23"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="OhV-aU-cLF">
-                                            <font key="font" size="12" name=".HelveticaNeueDeskInterface-Regular"/>
+                                            <font key="font" size="13" name=".HelveticaNeueDeskInterface-Regular"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0WC-RW-bEh">
-                                        <rect key="frame" x="20" y="94" width="296" height="23"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ilr-cr-Mng">
-                                            <font key="font" size="12" name=".HelveticaNeueDeskInterface-Regular"/>
-                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMb-7E-vcl">
-                                        <rect key="frame" x="92" y="26" width="152" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Log In" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hBg-WR-BsH">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-lt-YQw">
+                                        <rect key="frame" x="20" y="95" width="296" height="22"/>
+                                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Iel-4K-4bW">
                                             <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <allowedInputSourceLocales>
+                                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                            </allowedInputSourceLocales>
+                                        </secureTextFieldCell>
+                                    </secureTextField>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMb-7E-vcl">
+                                        <rect key="frame" x="92" y="27" width="152" height="38"/>
+                                        <buttonCell key="cell" type="smallSquare" title="Log In" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="hBg-WR-BsH">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" size="16" name=".HelveticaNeueDeskInterface-Regular"/>
                                         </buttonCell>
                                     </button>
                                 </subviews>
@@ -749,7 +752,10 @@
                     <connections>
                         <outlet property="credentialsView" destination="18x-cg-91a" id="jJ6-da-HEx"/>
                         <outlet property="header" destination="uGy-Uu-0an" id="1c4-hX-cje"/>
+                        <outlet property="loginButton" destination="DMb-7E-vcl" id="Hur-9A-LZW"/>
+                        <outlet property="passwordTxt" destination="VuN-lt-YQw" id="iVX-3G-Kh0"/>
                         <outlet property="subHeader" destination="Mul-Eh-1rm" id="Eja-mK-ADn"/>
+                        <outlet property="usernameTxt" destination="2Ha-7f-MJZ" id="Ir6-U6-CdV"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -760,5 +766,6 @@
     <resources>
         <image name="AnimotoLogo" width="360" height="108"/>
         <image name="HeaderBG" width="460.07998657226562" height="356.39999389648438"/>
+        <image name="teal" width="800" height="400"/>
     </resources>
 </document>
