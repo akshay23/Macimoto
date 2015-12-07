@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.AVKitIBPlugin" version="9060"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
@@ -966,7 +966,17 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AnimotoLogo" id="jhB-yw-ovv"/>
                                     </imageView>
                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ge0-8X-4ba">
-                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="100"/>
+                                        <rect key="frame" x="0.0" y="-4" width="1000" height="100"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-sg-lhV">
+                                                <rect key="frame" x="816" y="30" width="116" height="41"/>
+                                                <animations/>
+                                                <buttonCell key="cell" type="smallSquare" title="My Videos" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="HyV-xu-evK">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="16" name="Copperplate-Bold"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
                                         <animations/>
                                     </customView>
                                 </subviews>
