@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="9060"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
     </dependencies>
     <scenes>
@@ -681,7 +682,7 @@
                                         <rect key="frame" x="18" y="195" width="69" height="17"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Email:" id="680-d1-xtG">
-                                            <font key="font" size="15" name="Copperplate"/>
+                                            <font key="font" size="16" name="Copperplate-Bold"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -690,7 +691,7 @@
                                         <rect key="frame" x="18" y="120" width="107" height="17"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="u4E-6V-uQt">
-                                            <font key="font" size="15" name="Copperplate"/>
+                                            <font key="font" size="16" name="Copperplate-Bold"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -721,7 +722,7 @@
                                         <animations/>
                                         <buttonCell key="cell" type="smallSquare" title="Log In" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="hBg-WR-BsH">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" size="15" name="Copperplate"/>
+                                            <font key="font" size="16" name="Copperplate-Bold"/>
                                         </buttonCell>
                                         <connections>
                                             <segue destination="R8G-M0-D7p" kind="sheet" id="fgq-H6-IeU"/>
@@ -757,7 +758,7 @@
                                         <rect key="frame" x="413" y="10" width="174" height="30"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Log In" id="bW4-F6-uSr">
-                                            <font key="font" size="23" name="Copperplate"/>
+                                            <font key="font" size="24" name="Copperplate"/>
                                             <color key="textColor" red="0.27427601439790572" green="0.27427601439790572" blue="0.27427601439790572" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -825,13 +826,13 @@
                                 <animations/>
                             </customView>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="163" horizontalPageScroll="10" verticalLineScroll="163" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-Hm-Tgt">
-                                <rect key="frame" x="0.0" y="0.0" width="1000" height="651"/>
+                                <rect key="frame" x="0.0" y="516" width="1000" height="135"/>
                                 <clipView key="contentView" ambiguous="YES" id="iCR-Pq-Yqx">
-                                    <rect key="frame" x="1" y="1" width="998" height="649"/>
+                                    <rect key="frame" x="1" y="1" width="998" height="133"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="161" rowSizeStyle="automatic" viewBased="YES" id="sHX-8M-hya">
-                                            <rect key="frame" x="0.0" y="0.0" width="1011" height="649"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1011" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -914,16 +915,27 @@
                                 </clipView>
                                 <animations/>
                                 <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="FT0-Jo-fbs">
-                                    <rect key="frame" x="1" y="634" width="998" height="16"/>
+                                    <rect key="frame" x="1" y="118" width="998" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="cbu-JG-gKZ">
-                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <rect key="frame" x="983" y="1" width="16" height="133"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
                             </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xQe-Xg-9WD">
+                                <rect key="frame" x="60" y="33" width="81" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="m3y-wQ-ytX">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="lj3-g1-pam" kind="sheet" id="aJl-qH-cYV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                     </view>
@@ -931,6 +943,103 @@
                 <customObject id="FIA-vW-YBg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="1266"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hkt-U9-DzG">
+            <objects>
+                <viewController id="lj3-g1-pam" sceneMemberID="viewController">
+                    <view key="view" id="x54-KY-Vw9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="800"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JlV-KK-8HI">
+                                <rect key="frame" x="0.0" y="700" width="1000" height="100"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utq-E6-hHp" customClass="KPCScaleToFillNSImageView">
+                                        <rect key="frame" x="-3" y="0.0" width="1003" height="100"/>
+                                        <animations/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="HeaderBG" id="z8S-t5-TGU"/>
+                                    </imageView>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csK-qD-hsp">
+                                        <rect key="frame" x="326" y="-4" width="326" height="109"/>
+                                        <animations/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AnimotoLogo" id="jhB-yw-ovv"/>
+                                    </imageView>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ge0-8X-4ba">
+                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="100"/>
+                                        <animations/>
+                                    </customView>
+                                </subviews>
+                                <animations/>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYb-CR-qV1">
+                                <rect key="frame" x="0.0" y="651" width="1000" height="50"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-VY-fwb">
+                                        <rect key="frame" x="413" y="10" width="174" height="30"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Video Player" id="6Gq-gJ-M9d">
+                                            <font key="font" size="23" name="Copperplate"/>
+                                            <color key="textColor" red="0.27427601439999999" green="0.27427601439999999" blue="0.27427601439999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                            </customView>
+                            <avPlayerView fixedFrame="YES" controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="xWc-Fm-Dcb">
+                                <rect key="frame" x="20" y="177" width="706" height="409"/>
+                                <animations/>
+                            </avPlayerView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bhd-0W-ldg">
+                                <rect key="frame" x="18" y="602" width="706" height="31"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="TITLE" id="ccl-zT-Avo">
+                                    <font key="font" metaFont="system" size="26"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U9c-cE-hmb">
+                                <rect key="frame" x="18" y="33" width="710" height="126"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Description?" id="GnW-RJ-26x">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-yj-6nf">
+                                <rect key="frame" x="753" y="449" width="63" height="59"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" title="Share 2" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="T8V-HU-cmK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-kB-fMk">
+                                <rect key="frame" x="753" y="380" width="63" height="59"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" title="Share 3" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="EQx-lN-U5L">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-d4-bsU">
+                                <rect key="frame" x="753" y="527" width="63" height="59"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" title="Share 1" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="djM-3T-gIa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="ffE-Gx-u2T" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437" y="1259"/>
         </scene>
     </scenes>
     <resources>
