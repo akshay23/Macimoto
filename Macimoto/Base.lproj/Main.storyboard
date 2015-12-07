@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.AVKitIBPlugin" version="9060"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
@@ -755,11 +755,11 @@
                                 <rect key="frame" x="0.0" y="651" width="1000" height="50"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfy-fp-mP8">
-                                        <rect key="frame" x="413" y="10" width="174" height="30"/>
+                                        <rect key="frame" x="413" y="12" width="174" height="30"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Log In" id="bW4-F6-uSr">
                                             <font key="font" size="24" name="Copperplate"/>
-                                            <color key="textColor" red="0.27427601439790572" green="0.27427601439790572" blue="0.27427601439790572" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
@@ -785,7 +785,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="Kez-ac-gC8">
             <objects>
-                <viewController id="R8G-M0-D7p" userLabel="Dashboard View Controller" sceneMemberID="viewController">
+                <viewController id="R8G-M0-D7p" userLabel="Dashboard View Controller" customClass="MyVideosVC" customModule="Macimoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="npi-9c-hco">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -814,11 +814,11 @@
                                 <rect key="frame" x="0.0" y="651" width="1000" height="50"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuW-HG-8mJ">
-                                        <rect key="frame" x="413" y="10" width="174" height="30"/>
+                                        <rect key="frame" x="413" y="12" width="174" height="30"/>
                                         <animations/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Dashboard" id="P6K-Gb-byU">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="My Videos" id="P6K-Gb-byU">
                                             <font key="font" size="23" name="Copperplate"/>
-                                            <color key="textColor" red="0.27427601439999999" green="0.27427601439999999" blue="0.27427601439999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
@@ -939,15 +939,18 @@
                         </subviews>
                         <animations/>
                     </view>
+                    <connections>
+                        <outlet property="subHeader" destination="DR7-EG-LIG" id="niW-8j-bgy"/>
+                    </connections>
                 </viewController>
                 <customObject id="FIA-vW-YBg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="243" y="1266"/>
         </scene>
-        <!--View Controller-->
+        <!--Video PlayerVC-->
         <scene sceneID="hkt-U9-DzG">
             <objects>
-                <viewController id="lj3-g1-pam" sceneMemberID="viewController">
+                <viewController id="lj3-g1-pam" customClass="VideoPlayerVC" customModule="Macimoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="x54-KY-Vw9">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -975,6 +978,9 @@
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="16" name="Copperplate-Bold"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="backToVideos:" target="lj3-g1-pam" id="yXw-2e-Tzd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -986,21 +992,17 @@
                                 <rect key="frame" x="0.0" y="651" width="1000" height="50"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-VY-fwb">
-                                        <rect key="frame" x="413" y="10" width="174" height="30"/>
+                                        <rect key="frame" x="413" y="12" width="174" height="30"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Video Player" id="6Gq-gJ-M9d">
                                             <font key="font" size="23" name="Copperplate"/>
-                                            <color key="textColor" red="0.27427601439999999" green="0.27427601439999999" blue="0.27427601439999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                 </subviews>
                                 <animations/>
                             </customView>
-                            <avPlayerView fixedFrame="YES" controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="xWc-Fm-Dcb">
-                                <rect key="frame" x="20" y="177" width="706" height="409"/>
-                                <animations/>
-                            </avPlayerView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bhd-0W-ldg">
                                 <rect key="frame" x="18" y="602" width="706" height="31"/>
                                 <animations/>
@@ -1043,13 +1045,20 @@
                                     <font key="font" metaFont="miniSystem"/>
                                 </buttonCell>
                             </button>
+                            <avPlayerView fixedFrame="YES" controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="o5P-sf-fhC">
+                                <rect key="frame" x="20" y="175" width="702" height="419"/>
+                            </avPlayerView>
                         </subviews>
                         <animations/>
                     </view>
+                    <connections>
+                        <outlet property="myPlayer" destination="o5P-sf-fhC" id="Tlz-JX-EQm"/>
+                        <outlet property="subHeader" destination="zYb-CR-qV1" id="IiV-33-f7l"/>
+                    </connections>
                 </viewController>
                 <customObject id="ffE-Gx-u2T" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437" y="1259"/>
+            <point key="canvasLocation" x="1554" y="1266"/>
         </scene>
     </scenes>
     <resources>
