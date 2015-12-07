@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1919F1E11C15C4D80071067A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1919F1E01C15C4D80071067A /* AppDelegate.swift */; };
+		1919F1E31C15C4D80071067A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1919F1E21C15C4D80071067A /* ViewController.swift */; };
+		1919F1E61C15C4D80071067A /* Macimoto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1919F1E41C15C4D80071067A /* Macimoto.xcdatamodeld */; };
+		1919F1E81C15C4D80071067A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1919F1E71C15C4D80071067A /* Assets.xcassets */; };
+		1919F1EB1C15C4D80071067A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1919F1E91C15C4D80071067A /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1919F1DD1C15C4D80071067A /* Macimoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macimoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1919F1E01C15C4D80071067A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1919F1E21C15C4D80071067A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1919F1E51C15C4D80071067A /* Macimoto.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Macimoto.xcdatamodel; sourceTree = "<group>"; };
+		1919F1E71C15C4D80071067A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1919F1EA1C15C4D80071067A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1919F1EC1C15C4D80071067A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1919F1DA1C15C4D80071067A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1919F1D41C15C4D80071067A = {
+			isa = PBXGroup;
+			children = (
+				1919F1DF1C15C4D80071067A /* Macimoto */,
+				1919F1DE1C15C4D80071067A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1919F1DE1C15C4D80071067A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1919F1DD1C15C4D80071067A /* Macimoto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1919F1DF1C15C4D80071067A /* Macimoto */ = {
+			isa = PBXGroup;
+			children = (
+				1919F1E01C15C4D80071067A /* AppDelegate.swift */,
+				1919F1E21C15C4D80071067A /* ViewController.swift */,
+				1919F1E71C15C4D80071067A /* Assets.xcassets */,
+				1919F1E91C15C4D80071067A /* Main.storyboard */,
+				1919F1EC1C15C4D80071067A /* Info.plist */,
+				1919F1E41C15C4D80071067A /* Macimoto.xcdatamodeld */,
+			);
+			path = Macimoto;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1919F1DC1C15C4D80071067A /* Macimoto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1919F1EF1C15C4D80071067A /* Build configuration list for PBXNativeTarget "Macimoto" */;
+			buildPhases = (
+				1919F1D91C15C4D80071067A /* Sources */,
+				1919F1DA1C15C4D80071067A /* Frameworks */,
+				1919F1DB1C15C4D80071067A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Macimoto;
+			productName = Macimoto;
+			productReference = 1919F1DD1C15C4D80071067A /* Macimoto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1919F1D51C15C4D80071067A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Akshay Bharath";
+				TargetAttributes = {
+					1919F1DC1C15C4D80071067A = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 1919F1D81C15C4D80071067A /* Build configuration list for PBXProject "Macimoto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1919F1D41C15C4D80071067A;
+			productRefGroup = 1919F1DE1C15C4D80071067A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1919F1DC1C15C4D80071067A /* Macimoto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1919F1DB1C15C4D80071067A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1919F1E81C15C4D80071067A /* Assets.xcassets in Resources */,
+				1919F1EB1C15C4D80071067A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1919F1D91C15C4D80071067A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1919F1E31C15C4D80071067A /* ViewController.swift in Sources */,
+				1919F1E61C15C4D80071067A /* Macimoto.xcdatamodeld in Sources */,
+				1919F1E11C15C4D80071067A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1919F1E91C15C4D80071067A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1919F1EA1C15C4D80071067A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1919F1ED1C15C4D80071067A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1919F1EE1C15C4D80071067A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1919F1F01C15C4D80071067A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Macimoto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.actionman.Macimoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1919F1F11C15C4D80071067A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Macimoto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.actionman.Macimoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1919F1D81C15C4D80071067A /* Build configuration list for PBXProject "Macimoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1919F1ED1C15C4D80071067A /* Debug */,
+				1919F1EE1C15C4D80071067A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1919F1EF1C15C4D80071067A /* Build configuration list for PBXNativeTarget "Macimoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1919F1F01C15C4D80071067A /* Debug */,
+				1919F1F11C15C4D80071067A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1919F1E41C15C4D80071067A /* Macimoto.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1919F1E51C15C4D80071067A /* Macimoto.xcdatamodel */,
+			);
+			currentVersion = 1919F1E51C15C4D80071067A /* Macimoto.xcdatamodel */;
+			path = Macimoto.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1919F1D51C15C4D80071067A /* Project object */;
+}
