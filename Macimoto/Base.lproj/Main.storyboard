@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
     </dependencies>
@@ -678,49 +678,42 @@
                                 <rect key="frame" x="0.0" y="700" width="1000" height="100"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zn-Zd-dM2" customClass="KPCScaleToFillNSImageView">
-                                        <rect key="frame" x="-3" y="0.0" width="1000" height="100"/>
+                                        <rect key="frame" x="-3" y="0.0" width="1003" height="100"/>
+                                        <animations/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="HeaderBG" id="gFC-fK-DSm"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-wJ-Hry">
                                         <rect key="frame" x="326" y="-4" width="326" height="109"/>
+                                        <animations/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AnimotoLogo" id="Oep-Yd-kLA"/>
                                     </imageView>
                                 </subviews>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mul-Eh-1rm">
-                                <rect key="frame" x="0.0" y="651" width="1000" height="50"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfy-fp-mP8">
-                                        <rect key="frame" x="413" y="10" width="174" height="30"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Please Log In" id="bW4-F6-uSr">
-                                            <font key="font" size="25" name=".HelveticaNeueDeskInterface-Regular"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                </subviews>
+                                <animations/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18x-cg-91a">
-                                <rect key="frame" x="332" y="375" width="336" height="239"/>
+                                <rect key="frame" x="309" y="375" width="382" height="239"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JxP-Ba-Qi2">
                                         <rect key="frame" x="18" y="195" width="69" height="17"/>
+                                        <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Email:" id="680-d1-xtG">
-                                            <font key="font" size="16" name=".HelveticaNeueDeskInterface-Regular"/>
+                                            <font key="font" size="15" name="Copperplate"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBz-Vq-ieN">
                                         <rect key="frame" x="18" y="120" width="107" height="17"/>
+                                        <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="u4E-6V-uQt">
-                                            <font key="font" size="16" name=".HelveticaNeueDeskInterface-Regular"/>
+                                            <font key="font" size="15" name="Copperplate"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ha-7f-MJZ">
-                                        <rect key="frame" x="20" y="169" width="296" height="23"/>
+                                        <rect key="frame" x="20" y="169" width="342" height="23"/>
+                                        <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="OhV-aU-cLF">
                                             <font key="font" size="13" name=".HelveticaNeueDeskInterface-Regular"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -728,7 +721,8 @@
                                         </textFieldCell>
                                     </textField>
                                     <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-lt-YQw">
-                                        <rect key="frame" x="20" y="95" width="296" height="22"/>
+                                        <rect key="frame" x="20" y="95" width="342" height="22"/>
+                                        <animations/>
                                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Iel-4K-4bW">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -739,18 +733,36 @@
                                         </secureTextFieldCell>
                                     </secureTextField>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMb-7E-vcl">
-                                        <rect key="frame" x="92" y="27" width="152" height="38"/>
+                                        <rect key="frame" x="20" y="25" width="152" height="38"/>
+                                        <animations/>
                                         <buttonCell key="cell" type="smallSquare" title="Log In" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="hBg-WR-BsH">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" size="16" name=".HelveticaNeueDeskInterface-Regular"/>
+                                            <font key="font" size="15" name="Copperplate"/>
                                         </buttonCell>
                                         <connections>
                                             <segue destination="R8G-M0-D7p" kind="sheet" id="fgq-H6-IeU"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <animations/>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mul-Eh-1rm">
+                                <rect key="frame" x="0.0" y="651" width="1000" height="50"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfy-fp-mP8">
+                                        <rect key="frame" x="413" y="10" width="174" height="30"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Log In" id="bW4-F6-uSr">
+                                            <font key="font" size="23" name="Copperplate"/>
+                                            <color key="textColor" red="0.27427601439790572" green="0.27427601439790572" blue="0.27427601439790572" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <animations/>
                             </customView>
                         </subviews>
+                        <animations/>
                     </view>
                     <connections>
                         <outlet property="credentialsView" destination="18x-cg-91a" id="jJ6-da-HEx"/>
@@ -772,6 +784,7 @@
                     <view key="view" id="npi-9c-hco">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </view>
                 </viewController>
                 <customObject id="FIA-vW-YBg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
