@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.AVKitIBPlugin" version="9060"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
@@ -827,7 +827,7 @@
                                                     <font key="font" size="16" name="Copperplate-Bold"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="backToVideos:" target="lj3-g1-pam" id="YRP-8V-bc4"/>
+                                                    <action selector="logout:" target="R8G-M0-D7p" id="kIQ-mZ-jH9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -851,25 +851,14 @@
                                 </subviews>
                                 <animations/>
                             </customView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xQe-Xg-9WD">
-                                <rect key="frame" x="60" y="33" width="81" height="32"/>
-                                <animations/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="m3y-wQ-ytX">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="lj3-g1-pam" kind="sheet" id="aJl-qH-cYV"/>
-                                </connections>
-                            </button>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="1002" horizontalPageScroll="10" verticalLineScroll="1002" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNT-5h-8XU">
-                                <rect key="frame" x="3" y="71" width="994" height="579"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1000" height="650"/>
                                 <clipView key="contentView" ambiguous="YES" id="Oum-4K-ByO">
-                                    <rect key="frame" x="1" y="1" width="992" height="577"/>
+                                    <rect key="frame" x="1" y="1" width="998" height="648"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView hidden="YES" canDrawConcurrently="YES" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="1000" viewBased="YES" floatsGroupRows="NO" id="JHf-kL-1KQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="992" height="577"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="998" height="648"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -877,7 +866,7 @@
                                             <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="40" minWidth="40" maxWidth="1000" id="c9M-k3-yE0">
+                                                <tableColumn width="995" minWidth="40" maxWidth="1000" id="c9M-k3-yE0">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -891,7 +880,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="VideoCell" id="kOk-xr-cch">
-                                                            <rect key="frame" x="1" y="1" width="40" height="60"/>
+                                                            <rect key="frame" x="1" y="1" width="995" height="60"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-pB-qxI">
@@ -945,6 +934,7 @@
                     <connections>
                         <outlet property="subHeader" destination="DR7-EG-LIG" id="niW-8j-bgy"/>
                         <outlet property="videoTable" destination="JHf-kL-1KQ" id="mj2-By-rQ1"/>
+                        <segue destination="lj3-g1-pam" kind="sheet" identifier="showVideo" id="Mab-1j-NDd"/>
                     </connections>
                 </viewController>
                 <customObject id="FIA-vW-YBg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1145,7 +1135,7 @@
                                 <rect key="frame" x="18" y="574" width="348" height="23"/>
                                 <animations/>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Date" id="dIj-nk-0zf">
-                                    <font key="font" metaFont="system" size="12"/>
+                                    <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

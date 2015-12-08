@@ -69,6 +69,10 @@ class MyVideosVC: NSViewController {
     }
 
   }
+
+  @IBAction func logout(sender: AnyObject) {
+    self.dismissViewController(self)
+  }
 }
 
 extension MyVideosVC: NSTableViewDataSource {
@@ -94,6 +98,9 @@ extension MyVideosVC: NSTableViewDataSource {
 }
 
 extension MyVideosVC: NSTableViewDelegate {
+  func tableViewSelectionDidChange(notification: NSNotification) {
+    performSegueWithIdentifier("showVideo", sender: self)
+  }
 }
 
 extension NSImageView {
