@@ -14,6 +14,7 @@ import DJProgressHUD_OSX
 class MyVideosVC: NSViewController {
 
   @IBOutlet var subHeader: NSView!
+  @IBOutlet var videoTable: NSTableView!
   
   var oauthToken: String = ""
   var userID: Int = -1
@@ -30,11 +31,11 @@ class MyVideosVC: NSViewController {
   
   override func viewDidAppear() {
     super.viewDidAppear()
+    
+    getVideoData()
   }
   
-  override func loadView() {
-    super.loadView()
-    
+  func getVideoData() {
     DJProgressHUD.showStatus("Getting Videos..", fromView: view)
     
     let request = Animoto.Router.requestProjectsWithPageNumber(userID, page: 1)
@@ -58,9 +59,29 @@ class MyVideosVC: NSViewController {
               self.videos.append((videoTitle, videoThumbnail, ""))
             }
           }
+          self.videoTable.reloadData()
         }
         
         DJProgressHUD.dismiss()
     }
+
   }
 }
+
+extension MyVideosVC: NSTableViewDataSource {
+  func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+    return 5
+  }
+  
+  func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+    let cell = tableView.makeViewWithIdentifier("VideoCell", owner: self) as! NSTableCellView
+    
+    cell.textField!.stringValue = "asdasd"
+    
+    return cell
+  }
+}
+
+extension MyVideosVC: NSTableViewDelegate {
+}
+

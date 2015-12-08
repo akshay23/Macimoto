@@ -95,8 +95,6 @@ extension ViewController {
       .responseJSON {
         (result) in
         
-        //debugPrint(result.result)
-        
         if (result.result.isSuccess) {
           let json = JSON(result.result.value!)
           print("User is logged in now!!")
