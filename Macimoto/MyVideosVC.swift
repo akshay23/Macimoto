@@ -18,7 +18,7 @@ class MyVideosVC: NSViewController {
   
   var oauthToken: String = ""
   var userID: Int = -1
-  var videos: [(title: String, coverImageURL: String, videoURL: String)] = []
+  var videos: [(title: String, description: String, date: String, user: String, coverImageURL: String, videoURL: String)] = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -63,18 +63,19 @@ class MyVideosVC: NSViewController {
             let videos = project["videos"].arrayValue
             for video in videos {
               var videoURL = ""
+              var videoDate = ""
               let videoTitle = video["title"].stringValue
+              let videoDescription = video["description"].stringValue
+              let videoUser = video["producer"].stringValue
               let videoThumbnail = video["links"]["thumbnail_image"].stringValue
               let videoFormats = video["video_formats"].arrayValue
               for format in videoFormats {
                 if (format["purpose"].stringValue == "final" && videoURL == "") {
                   videoURL = format["links"]["file"].stringValue
+                  videoDate = format["created_at"].stringValue
                 }
               }
-              print(videoTitle)
-              print(videoThumbnail)
-              print(videoURL)
-              self.videos.append((videoTitle, videoThumbnail, videoURL))
+              self.videos.append((videoTitle, videoDescription, videoDate, videoUser, videoThumbnail, videoURL))
             }
           }
           self.videoTable.reloadData()
@@ -86,6 +87,7 @@ class MyVideosVC: NSViewController {
   }
 
   @IBAction func logout(sender: AnyObject) {
+    view.removeFromSuperview()
     self.dismissViewController(self)
   }
 }
