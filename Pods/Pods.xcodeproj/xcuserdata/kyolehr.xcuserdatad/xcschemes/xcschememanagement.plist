@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>DJProgressHUD_OSX.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Pods-Macimoto.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,7 +32,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5705FB3722619DC6FAA977D67348FD14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>65D166E5021AC72B49C7C8D2BA910B7B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4CE8C681A54427CD5711C85648E7761</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA4CAC751F1899ABA5A02C6E6B536AB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
