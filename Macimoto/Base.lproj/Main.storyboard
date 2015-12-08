@@ -849,13 +849,13 @@
                                     <segue destination="lj3-g1-pam" kind="sheet" id="aJl-qH-cYV"/>
                                 </connections>
                             </button>
-                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="69" horizontalPageScroll="10" verticalLineScroll="69" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNT-5h-8XU">
+                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="1002" horizontalPageScroll="10" verticalLineScroll="1002" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNT-5h-8XU">
                                 <rect key="frame" x="3" y="71" width="994" height="579"/>
                                 <clipView key="contentView" ambiguous="YES" id="Oum-4K-ByO">
                                     <rect key="frame" x="1" y="1" width="992" height="577"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView focusRingType="exterior" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="67" rowSizeStyle="automatic" viewBased="YES" id="JHf-kL-1KQ">
+                                        <tableView hidden="YES" canDrawConcurrently="YES" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="1000" viewBased="YES" floatsGroupRows="NO" id="JHf-kL-1KQ">
                                             <rect key="frame" x="0.0" y="0.0" width="992" height="577"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -869,33 +869,33 @@
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
-                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="LkV-aY-iWo">
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" selectable="YES" editable="YES" title="Text Cell" id="LkV-aY-iWo">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="VideoCell" focusRingType="exterior" id="Qc4-QO-2yz">
-                                                            <rect key="frame" x="1" y="1" width="969" height="67"/>
+                                                        <tableCellView identifier="VideoCell" id="kOk-xr-cch">
+                                                            <rect key="frame" x="1" y="1" width="969" height="60"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Fj-hn-EgC">
-                                                                    <rect key="frame" x="3" y="3" width="96" height="61"/>
-                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="J3R-Oa-epa"/>
+                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-pB-qxI">
+                                                                    <rect key="frame" x="3" y="-33" width="148" height="90"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="4Hg-yS-yFI"/>
                                                                 </imageView>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hLv-JF-ext">
-                                                                    <rect key="frame" x="119" y="25" width="105" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="mtw-oI-fAi">
-                                                                        <font key="font" metaFont="system"/>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xy9-kv-2mj">
+                                                                    <rect key="frame" x="162" y="0.0" width="397" height="24"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Dx1-Y0-5al">
+                                                                        <font key="font" size="20" name=".HelveticaNeueDeskInterface-Regular"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
-                                                                <outlet property="imageView" destination="3Fj-hn-EgC" id="90P-ki-v57"/>
-                                                                <outlet property="textField" destination="hLv-JF-ext" id="2qN-XS-anc"/>
+                                                                <outlet property="imageView" destination="mtx-pB-qxI" id="OEX-ye-hoP"/>
+                                                                <outlet property="textField" destination="Xy9-kv-2mj" id="4cT-et-Tlb"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>

@@ -23,6 +23,9 @@ class MyVideosVC: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    // Table stuff
+    videoTable.rowSizeStyle = NSTableViewRowSizeStyle.Custom
+    
     // Make BG of sub header black
     subHeader.wantsLayer = true
     let subHeaderLayer = subHeader.layer
@@ -70,18 +73,40 @@ class MyVideosVC: NSViewController {
 
 extension MyVideosVC: NSTableViewDataSource {
   func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-    return 5
+    if (videos.count > 0) {
+      tableView.hidden = false
+    }
+    return videos.count
+  }
+  
+  func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+    return 100
   }
   
   func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
     let cell = tableView.makeViewWithIdentifier("VideoCell", owner: self) as! NSTableCellView
     
-    cell.textField!.stringValue = "asdasd"
+    cell.textField!.stringValue = videos[row].title
+    cell.imageView!.imageFromUrl(videos[row].coverImageURL)
     
     return cell
   }
 }
 
 extension MyVideosVC: NSTableViewDelegate {
+}
+
+extension NSImageView {
+  public func imageFromUrl(urlString: String) {
+    if let url = NSURL(string: urlString) {
+      let request = NSURLRequest(URL: url)
+      NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
+        (response: NSURLResponse?, data: NSData?, error: NSError?) -> Void in
+        if let imageData = data as NSData? {
+          self.image = NSImage(data: imageData)
+        }
+      }
+    }
+  }
 }
 
