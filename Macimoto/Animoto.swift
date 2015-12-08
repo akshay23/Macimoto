@@ -11,7 +11,7 @@ import Alamofire
 
 struct Animoto {
   enum Router: URLRequestConvertible {
-    static let baseURLString = "https://app-service.animoto.com"
+    static let baseURLString = "https://app-service-qa.animoto.com"
     static let clientID = "iphone"
     static let clientSecret = "iphone2secret"
     //static let redirectURI = "http://www.animoto.com/"
@@ -25,6 +25,14 @@ struct Animoto {
       let urlString = Animoto.Router.baseURLString + pathString
       return (urlString, params)
     }
+    
+    static func requestLoginStringAndParms() -> (URLString: String, Params: [String: AnyObject]) {
+      let params = ["grant_type": "password"]
+      let pathString = "/oauth/access_token"
+      let urlString = Animoto.Router.baseURLString + pathString
+      return (urlString, params)
+    }
+
     
     var URLRequest: NSMutableURLRequest {
       let (path, parameters): (String, [String: AnyObject]) = {

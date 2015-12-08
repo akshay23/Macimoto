@@ -8,6 +8,7 @@
 
 import Cocoa
 import Alamofire
+import SwiftyJSON
 import DJProgressHUD_OSX
 
 class ViewController: NSViewController {
@@ -43,6 +44,9 @@ class ViewController: NSViewController {
     pstyle.alignment = NSTextAlignment.Center
     loginButton.attributedTitle = NSAttributedString(string: "Log In", attributes: [ NSForegroundColorAttributeName : NSColor.whiteColor(), NSParagraphStyleAttributeName : pstyle, NSFontAttributeName : NSFont.systemFontOfSize(16) ])
     
+    // Focus on username box
+    usernameTxt.becomeFirstResponder()
+    
     // Get OAuth token (if empty)
     getOauthToken()
   }
@@ -57,16 +61,19 @@ class ViewController: NSViewController {
     if (oauthToken == "") {
       let request = Animoto.Router.requestAccessTokenURLStringAndParms()
       let authString = "\(Animoto.Router.clientID):\(Animoto.Router.clientSecret)"
-      let encoded = authString.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedDataWithOptions([])
+      let encoded = authString.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions([])
+      let headerVals = ["Authorization": "Basic \(encoded)", "Accept": "application/vnd.animoto-v4+json",
+        "Content-Type": "application/vnd.animoto-v4+json", "User-Agent": "iPad 2 (WiFi) (OS 8.0) (Macimoto 1.0) (app_service 2.0)"]
       
-      Alamofire.request(.POST, request.URLString, parameters: ["grant_type": "client_credentials"], encoding: .JSON, headers: ["Authorization": "Basic \(encoded)"])
+      Alamofire.request(.POST, request.URLString, parameters: ["grant_type": "client_credentials"],
+        encoding: .JSON, headers: headerVals)
         .responseJSON {
           (result) in
           
-          debugPrint(result)
-          
           if (result.result.isSuccess) {
-            print("BLAH BLAH")
+            let json = JSON(result.result.value!)
+            self.oauthToken = json["access_token"].stringValue
+            print("The oauth token is \(self.oauthToken)")
           }
       }
     }
@@ -78,11 +85,27 @@ extension ViewController {
   @IBAction func login(sender: AnyObject) {
     DJProgressHUD.showStatus("Loading..", fromView: view)
     
-    checkmark1.hidden = false
-    checkmark2.hidden = false
+    // Validate user info
+    let request = Animoto.Router.requestLoginStringAndParms()
+    let headerVals = ["Authorization": "Bearer \(oauthToken)", "Accept": "application/vnd.animoto-v4+json",
+      "Content-Type": "application/vnd.animoto-v4+json", "User-Agent": "iPad 2 (WiFi) (OS 8.0) (Macimoto 1.0) (app_service 2.0)"]
     
-    DJProgressHUD.dismiss()
-    performSegueWithIdentifier("unwindToVideos", sender: self)
+    Alamofire.request(.POST, request.URLString, parameters: ["grant_type": "password", "username": usernameTxt.stringValue,
+      "password": passwordTxt.stringValue], encoding: .JSON, headers: headerVals)
+      .responseJSON {
+        (result) in
+        
+        debugPrint(result)
+        
+        if (result.result.isSuccess) {
+          print("User is logged in now!!")
+          self.checkmark1.hidden = false
+          self.checkmark2.hidden = false
+          DJProgressHUD.dismiss()
+          
+          self.performSegueWithIdentifier("unwindToVideos", sender: self)
+        }
+    }
   }
 }
 
