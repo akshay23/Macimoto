@@ -17,6 +17,8 @@ class ViewController: NSViewController {
   @IBOutlet var usernameTxt: NSTextField!
   @IBOutlet var passwordTxt: NSSecureTextField!
   @IBOutlet var loginButton: NSButton!
+  @IBOutlet var checkmark1: NSImageView!
+  @IBOutlet var checkmark2: NSImageView!
   
   var oauthToken: String = ""
 
@@ -56,7 +58,7 @@ class ViewController: NSViewController {
       let authString = "\(Animoto.Router.clientID):\(Animoto.Router.clientSecret)"
       let encoded = authString.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedDataWithOptions([])
       
-      Alamofire.request(.POST, request.URLString, parameters: request.Params, encoding: .JSON, headers: ["Authorization" : "Basic \(encoded)"])
+      Alamofire.request(.POST, request.URLString, parameters: ["grant_type": "client_credentials"], encoding: .JSON, headers: ["Authorization": "Basic \(encoded)"])
         .responseJSON {
           (result) in
           
@@ -67,6 +69,16 @@ class ViewController: NSViewController {
           }
       }
     }
+  }
+}
+
+// MARK - IBActions
+extension ViewController {
+  @IBAction func login(sender: AnyObject) {
+    checkmark1.hidden = false
+    checkmark2.hidden = false
+
+    performSegueWithIdentifier("unwindToVideos", sender: self)
   }
 }
 

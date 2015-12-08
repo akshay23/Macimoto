@@ -697,7 +697,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ha-7f-MJZ">
-                                        <rect key="frame" x="20" y="169" width="342" height="23"/>
+                                        <rect key="frame" x="20" y="169" width="309" height="23"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="OhV-aU-cLF">
                                             <font key="font" size="13" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -706,7 +706,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-lt-YQw">
-                                        <rect key="frame" x="20" y="95" width="342" height="22"/>
+                                        <rect key="frame" x="20" y="95" width="309" height="22"/>
                                         <animations/>
                                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Iel-4K-4bW">
                                             <font key="font" metaFont="system"/>
@@ -725,9 +725,17 @@
                                             <font key="font" size="16" name="Copperplate-Bold"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="R8G-M0-D7p" kind="sheet" identifier="unwindToVideos" id="fgq-H6-IeU"/>
+                                            <action selector="login:" target="XfG-lQ-9wD" id="C8J-rx-X8V"/>
                                         </connections>
                                     </button>
+                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZU-Hg-CJH" userLabel="Checkmark1">
+                                        <rect key="frame" x="337" y="168" width="25" height="25"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="checkmark" id="B7r-n5-icO"/>
+                                    </imageView>
+                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gox-nP-Ekj" userLabel="Checkmark2">
+                                        <rect key="frame" x="337" y="94" width="25" height="25"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="checkmark" id="AaI-Gs-ROr"/>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                             </customView>
@@ -770,12 +778,15 @@
                         <animations/>
                     </view>
                     <connections>
+                        <outlet property="checkmark1" destination="8ZU-Hg-CJH" id="JtA-Jr-d3e"/>
+                        <outlet property="checkmark2" destination="Gox-nP-Ekj" id="gCa-zo-5nP"/>
                         <outlet property="credentialsView" destination="18x-cg-91a" id="jJ6-da-HEx"/>
                         <outlet property="header" destination="uGy-Uu-0an" id="1c4-hX-cje"/>
                         <outlet property="loginButton" destination="DMb-7E-vcl" id="Hur-9A-LZW"/>
                         <outlet property="passwordTxt" destination="VuN-lt-YQw" id="iVX-3G-Kh0"/>
                         <outlet property="subHeader" destination="Mul-Eh-1rm" id="Eja-mK-ADn"/>
                         <outlet property="usernameTxt" destination="2Ha-7f-MJZ" id="Ir6-U6-CdV"/>
+                        <segue destination="R8G-M0-D7p" kind="sheet" identifier="unwindToVideos" id="QZf-Pq-dcs"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1064,6 +1075,7 @@
     <resources>
         <image name="AnimotoLogo" width="360" height="108"/>
         <image name="HeaderBG" width="460.07998657226562" height="356.39999389648438"/>
+        <image name="checkmark" width="512" height="512"/>
         <image name="teal" width="800" height="400"/>
     </resources>
 </document>
