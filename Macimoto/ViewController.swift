@@ -23,6 +23,7 @@ class ViewController: NSViewController {
   @IBOutlet var checkmark2: NSImageView!
   
   var oauthToken: String = ""
+  var userID: Int = -1
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,6 +46,7 @@ class ViewController: NSViewController {
     loginButton.attributedTitle = NSAttributedString(string: "Log In", attributes: [ NSForegroundColorAttributeName : NSColor.whiteColor(), NSParagraphStyleAttributeName : pstyle, NSFontAttributeName : NSFont.systemFontOfSize(16) ])
     
     // Focus on username box
+    passwordTxt.resignFirstResponder()
     usernameTxt.becomeFirstResponder()
     
     // Get OAuth token (if empty)
@@ -53,29 +55,28 @@ class ViewController: NSViewController {
   
   override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "unwindToVideos" && segue.destinationController.isKindOfClass(MyVideosVC.classForCoder()) {
-      //let videosViewController = segue.destinationController as! MyVideosVC
+      let videosViewController = segue.destinationController as! MyVideosVC
+      videosViewController.oauthToken = self.oauthToken
+      videosViewController.userID = self.userID
     }
   }
   
   func getOauthToken() {
-    if (oauthToken == "") {
-      let request = Animoto.Router.requestAccessTokenURLStringAndParms()
-      let authString = "\(Animoto.Router.clientID):\(Animoto.Router.clientSecret)"
-      let encoded = authString.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions([])
-      let headerVals = ["Authorization": "Basic \(encoded)", "Accept": "application/vnd.animoto-v4+json",
-        "Content-Type": "application/vnd.animoto-v4+json", "User-Agent": "iPad 2 (WiFi) (OS 8.0) (Macimoto 1.0) (app_service 2.0)"]
-      
-      Alamofire.request(.POST, request.URLString, parameters: ["grant_type": "client_credentials"],
-        encoding: .JSON, headers: headerVals)
-        .responseJSON {
-          (result) in
-          
-          if (result.result.isSuccess) {
-            let json = JSON(result.result.value!)
-            self.oauthToken = json["access_token"].stringValue
-            print("The oauth token is \(self.oauthToken)")
-          }
-      }
+    let request = Animoto.Router.requestAccessTokenURLStringAndParms()
+    let authString = "\(Animoto.Router.clientID):\(Animoto.Router.clientSecret)"
+    let encoded = authString.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions([])
+    let headerVals = ["Authorization": "Basic \(encoded)", "Accept": "application/vnd.animoto-v4+json",
+      "Content-Type": "application/vnd.animoto-v4+json", "User-Agent": "iPad 2 (WiFi) (OS 8.0) (Macimoto 1.0) (app_service 2.0)"]
+    
+    Alamofire.request(.POST, request.URLString, parameters: request.Params, encoding: .JSON, headers: headerVals)
+      .responseJSON {
+        (result) in
+        
+        if (result.result.isSuccess) {
+          let json = JSON(result.result.value!)
+          self.oauthToken = json["access_token"].stringValue
+          print("The oauth token is \(self.oauthToken)")
+        }
     }
   }
 }
@@ -86,26 +87,29 @@ extension ViewController {
     DJProgressHUD.showStatus("Loading..", fromView: view)
     
     // Validate user info
-    let request = Animoto.Router.requestLoginStringAndParms()
+    let request = Animoto.Router.requestLoginStringAndParms(usernameTxt.stringValue, password: passwordTxt.stringValue)
     let headerVals = ["Authorization": "Bearer \(oauthToken)", "Accept": "application/vnd.animoto-v4+json",
       "Content-Type": "application/vnd.animoto-v4+json", "User-Agent": "iPad 2 (WiFi) (OS 8.0) (Macimoto 1.0) (app_service 2.0)"]
     
-    Alamofire.request(.POST, request.URLString, parameters: ["grant_type": "password", "username": usernameTxt.stringValue,
-      "password": passwordTxt.stringValue], encoding: .JSON, headers: headerVals)
+    Alamofire.request(.POST, request.URLString, parameters: request.Params, encoding: .JSON, headers: headerVals)
       .responseJSON {
         (result) in
         
-        debugPrint(result)
+        //debugPrint(result.result)
         
         if (result.result.isSuccess) {
+          let json = JSON(result.result.value!)
           print("User is logged in now!!")
           self.checkmark1.hidden = false
           self.checkmark2.hidden = false
-          DJProgressHUD.dismiss()
+          self.oauthToken = json["access_token"].stringValue
+          self.userID = json["user"]["id"].intValue
+          print("User auth token is \(self.oauthToken)")
+          print("User ID is \(self.userID)")
           self.performSegueWithIdentifier("unwindToVideos", sender: self)
-        } else {
-          DJProgressHUD.dismiss()
         }
+        
+        DJProgressHUD.dismiss()
     }
   }
 }
