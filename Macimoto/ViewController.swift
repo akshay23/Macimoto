@@ -102,8 +102,9 @@ extension ViewController {
           self.checkmark1.hidden = false
           self.checkmark2.hidden = false
           DJProgressHUD.dismiss()
-          
           self.performSegueWithIdentifier("unwindToVideos", sender: self)
+        } else {
+          DJProgressHUD.dismiss()
         }
     }
   }
