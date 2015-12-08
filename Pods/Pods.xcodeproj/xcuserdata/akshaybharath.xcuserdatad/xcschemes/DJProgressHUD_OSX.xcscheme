@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CB238D0FC13D9B6E6EDD2D86'
-               BlueprintName = 'Pods-Macimoto'
+               BlueprintIdentifier = '3312F44BF7718CBB1F2365DE'
+               BlueprintName = 'DJProgressHUD_OSX'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Macimoto.framework'>
+               BuildableName = 'DJProgressHUD_OSX.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

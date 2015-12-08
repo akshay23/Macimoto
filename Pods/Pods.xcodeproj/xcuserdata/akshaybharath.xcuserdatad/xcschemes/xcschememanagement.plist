@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DJProgressHUD_OSX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Macimoto.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>42ACC0D4E64919989909F50364480423</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FBC480F00D24F98E396999B4ACF4A2D5</key>
+		<key>5705FB3722619DC6FAA977D67348FD14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4CE8C681A54427CD5711C85648E7761</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA4CAC751F1899ABA5A02C6E6B536AB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

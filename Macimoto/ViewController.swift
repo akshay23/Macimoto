@@ -8,6 +8,7 @@
 
 import Cocoa
 import Alamofire
+import DJProgressHUD_OSX
 
 class ViewController: NSViewController {
 
@@ -75,9 +76,12 @@ class ViewController: NSViewController {
 // MARK - IBActions
 extension ViewController {
   @IBAction func login(sender: AnyObject) {
+    DJProgressHUD.showStatus("Loading..", fromView: view)
+    
     checkmark1.hidden = false
     checkmark2.hidden = false
-
+    
+    DJProgressHUD.dismiss()
     performSegueWithIdentifier("unwindToVideos", sender: self)
   }
 }

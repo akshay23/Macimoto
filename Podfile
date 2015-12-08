@@ -6,5 +6,6 @@ use_frameworks!
 target 'Macimoto' do
   pod 'SwiftyJSON'
   pod 'Alamofire'
+  pod 'DJProgressHUD_OSX'
 end
 
