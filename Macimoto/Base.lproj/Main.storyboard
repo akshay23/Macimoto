@@ -1035,28 +1035,6 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <avPlayerView fixedFrame="YES" controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="o5P-sf-fhC">
-                                <rect key="frame" x="20" y="175" width="702" height="419"/>
-                                <animations/>
-                            </avPlayerView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJ8-1K-bSC">
-                                <rect key="frame" x="736" y="566" width="127" height="28"/>
-                                <animations/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="By" id="c7j-Qc-Ouo">
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8k-3Y-SFd">
-                                <rect key="frame" x="746" y="513" width="161" height="54"/>
-                                <animations/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Akshay Lehr" id="Ogw-Bu-Qoz">
-                                    <font key="font" metaFont="system" size="24"/>
-                                    <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-yj-6nf">
                                 <rect key="frame" x="753" y="352" width="53" height="51"/>
                                 <animations/>
@@ -1066,7 +1044,7 @@
                                 </buttonCell>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-kB-fMk">
-                                <rect key="frame" x="816" y="422" width="53" height="47"/>
+                                <rect key="frame" x="816" y="422" width="53" height="49"/>
                                 <animations/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="youtube" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="EQx-lN-U5L">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1089,6 +1067,10 @@
                                     <font key="font" metaFont="miniSystem"/>
                                 </buttonCell>
                             </button>
+                            <avPlayerView fixedFrame="YES" controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="o5P-sf-fhC">
+                                <rect key="frame" x="20" y="175" width="702" height="419"/>
+                                <animations/>
+                            </avPlayerView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0V-zB-cWM">
                                 <rect key="frame" x="736" y="477" width="127" height="28"/>
                                 <animations/>
@@ -1098,6 +1080,65 @@
                                     <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJ8-1K-bSC">
+                                <rect key="frame" x="736" y="566" width="127" height="28"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="By" id="c7j-Qc-Ouo">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAc-0x-pdJ">
+                                <rect key="frame" x="736" y="287" width="127" height="28"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Options" id="ucq-PY-Cnj">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8k-3Y-SFd">
+                                <rect key="frame" x="746" y="513" width="161" height="54"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Akshay Lehr" id="Ogw-Bu-Qoz">
+                                    <font key="font" metaFont="system" size="24"/>
+                                    <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3q-Tf-0on">
+                                <rect key="frame" x="753" y="262" width="589" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Edit Video" bezelStyle="texturedRounded" image="edit" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="vl2-qD-okL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".AppleSystemUIFont"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sxa-YB-pGD">
+                                <rect key="frame" x="753" y="232" width="125" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Download" bezelStyle="texturedRounded" image="download" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="pDe-89-ATw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IqP-yr-pE3">
+                                <rect key="frame" x="753" y="168" width="125" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Settings" bezelStyle="texturedRounded" image="settings" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="a8v-se-Ncw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-9E-fC6">
+                                <rect key="frame" x="753" y="199" width="125" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Upgrade to HD" bezelStyle="texturedRounded" image="HD" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="rDe-Hh-KgY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <animations/>
                     </view>
@@ -1114,9 +1155,13 @@
     <resources>
         <image name="AnimotoLogo" width="360" height="108"/>
         <image name="Google+" width="512" height="512"/>
+        <image name="HD" width="512" height="512"/>
         <image name="HeaderBG" width="460.07998657226562" height="356.39999389648438"/>
         <image name="checkmark" width="512" height="512"/>
+        <image name="download" width="256" height="256"/>
+        <image name="edit" width="512" height="512"/>
         <image name="facebook" width="320" height="320"/>
+        <image name="settings" width="128" height="128"/>
         <image name="teal" width="800" height="400"/>
         <image name="twitter" width="300" height="300"/>
         <image name="youtube" width="300" height="300"/>
