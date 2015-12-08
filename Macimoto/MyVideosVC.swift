@@ -38,6 +38,13 @@ class MyVideosVC: NSViewController {
     getVideoData()
   }
   
+  override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "showVideo" && segue.destinationController.isKindOfClass(VideoPlayerVC.classForCoder()) {
+      let videoPlayerViewController = segue.destinationController as! VideoPlayerVC
+      videoPlayerViewController.videoData = videos[videoTable.selectedRow]
+    }
+  }
+  
   func getVideoData() {
     DJProgressHUD.showStatus("Getting Videos..", fromView: view)
     
@@ -55,11 +62,19 @@ class MyVideosVC: NSViewController {
           for project in projects {
             let videos = project["videos"].arrayValue
             for video in videos {
+              var videoURL = ""
               let videoTitle = video["title"].stringValue
               let videoThumbnail = video["links"]["thumbnail_image"].stringValue
+              let videoFormats = video["video_formats"].arrayValue
+              for format in videoFormats {
+                if (format["purpose"].stringValue == "final" && videoURL == "") {
+                  videoURL = format["links"]["file"].stringValue
+                }
+              }
               print(videoTitle)
               print(videoThumbnail)
-              self.videos.append((videoTitle, videoThumbnail, ""))
+              print(videoURL)
+              self.videos.append((videoTitle, videoThumbnail, videoURL))
             }
           }
           self.videoTable.reloadData()
@@ -99,7 +114,9 @@ extension MyVideosVC: NSTableViewDataSource {
 
 extension MyVideosVC: NSTableViewDelegate {
   func tableViewSelectionDidChange(notification: NSNotification) {
-    performSegueWithIdentifier("showVideo", sender: self)
+    if (videoTable.selectedRow < videos.count && videoTable.selectedRow > -1) {
+      performSegueWithIdentifier("showVideo", sender: self)
+    }
   }
 }
 
