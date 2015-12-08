@@ -11,6 +11,8 @@ import Cocoa
 class MyVideosVC: NSViewController {
 
   @IBOutlet var subHeader: NSView!
+  
+  var isLoggedIn: Bool = false
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,5 +21,9 @@ class MyVideosVC: NSViewController {
     subHeader.wantsLayer = true
     let subHeaderLayer = subHeader.layer
     subHeaderLayer?.backgroundColor = CGColorCreateGenericRGB(0, 0, 0, 1)
+  }
+  
+  override func viewDidAppear() {
+    super.viewDidAppear()
   }
 }

@@ -725,7 +725,7 @@
                                             <font key="font" size="16" name="Copperplate-Bold"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="R8G-M0-D7p" kind="sheet" id="fgq-H6-IeU"/>
+                                            <segue destination="R8G-M0-D7p" kind="sheet" identifier="unwindToVideos" id="fgq-H6-IeU"/>
                                         </connections>
                                     </button>
                                 </subviews>

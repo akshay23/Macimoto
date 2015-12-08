@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Macimoto.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>24876128C6EA35787D226383259156A4</key>
+		<key>42ACC0D4E64919989909F50364480423</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65D166E5021AC72B49C7C8D2BA910B7B</key>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBC480F00D24F98E396999B4ACF4A2D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Alamofire
 
 class ViewController: NSViewController {
 
@@ -16,6 +17,8 @@ class ViewController: NSViewController {
   @IBOutlet var usernameTxt: NSTextField!
   @IBOutlet var passwordTxt: NSSecureTextField!
   @IBOutlet var loginButton: NSButton!
+  
+  var oauthToken: String = ""
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,11 +39,33 @@ class ViewController: NSViewController {
     let pstyle = NSMutableParagraphStyle()
     pstyle.alignment = NSTextAlignment.Center
     loginButton.attributedTitle = NSAttributedString(string: "Log In", attributes: [ NSForegroundColorAttributeName : NSColor.whiteColor(), NSParagraphStyleAttributeName : pstyle, NSFontAttributeName : NSFont.systemFontOfSize(16) ])
+    
+    // Get OAuth token (if empty)
+    getOauthToken()
   }
-
-  override var representedObject: AnyObject? {
-    didSet {
-    // Update the view, if already loaded.
+  
+  override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "unwindToVideos" && segue.destinationController.isKindOfClass(MyVideosVC.classForCoder()) {
+      //let videosViewController = segue.destinationController as! MyVideosVC
+    }
+  }
+  
+  func getOauthToken() {
+    if (oauthToken == "") {
+      let request = Animoto.Router.requestAccessTokenURLStringAndParms()
+      let authString = "\(Animoto.Router.clientID):\(Animoto.Router.clientSecret)"
+      let encoded = authString.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedDataWithOptions([])
+      
+      Alamofire.request(.POST, request.URLString, parameters: request.Params, encoding: .JSON, headers: ["Authorization" : "Basic \(encoded)"])
+        .responseJSON {
+          (result) in
+          
+          debugPrint(result)
+          
+          if (result.result.isSuccess) {
+            print("BLAH BLAH")
+          }
+      }
     }
   }
 }

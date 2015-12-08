@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'Macimoto' do
   pod 'SwiftyJSON'
+  pod 'Alamofire'
 end
 

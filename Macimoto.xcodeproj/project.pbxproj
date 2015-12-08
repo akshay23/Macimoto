@@ -18,6 +18,7 @@
 		19BE22DD1C16414800DE3A94 /* ANUserCapability.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BE22DC1C16414800DE3A94 /* ANUserCapability.m */; };
 		19BE22E71C164F8500DE3A94 /* MyVideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE22E61C164F8500DE3A94 /* MyVideosVC.swift */; };
 		19BE22E91C164FAD00DE3A94 /* VideoPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE22E81C164FAD00DE3A94 /* VideoPlayerVC.swift */; };
+		19BE22ED1C16537F00DE3A94 /* Animoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BE22EC1C16537F00DE3A94 /* Animoto.swift */; };
 		19D2149D1C160EBB00941D81 /* ANRemoteConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D2149C1C160EBB00941D81 /* ANRemoteConfigManager.m */; };
 		C02CE35C4A2BD6B3DDF7541F /* Pods_Macimoto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C378C9C6F83717A820BA28 /* Pods_Macimoto.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		19BE22DC1C16414800DE3A94 /* ANUserCapability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANUserCapability.m; sourceTree = "<group>"; };
 		19BE22E61C164F8500DE3A94 /* MyVideosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyVideosVC.swift; sourceTree = "<group>"; };
 		19BE22E81C164FAD00DE3A94 /* VideoPlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerVC.swift; sourceTree = "<group>"; };
+		19BE22EC1C16537F00DE3A94 /* Animoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animoto.swift; sourceTree = "<group>"; };
 		19D2149A1C160EBB00941D81 /* ANConfigurationDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANConfigurationDefinition.h; sourceTree = "<group>"; };
 		19D2149B1C160EBB00941D81 /* ANRemoteConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANRemoteConfigManager.h; sourceTree = "<group>"; };
 		19D2149C1C160EBB00941D81 /* ANRemoteConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANRemoteConfigManager.m; sourceTree = "<group>"; };
@@ -90,16 +92,14 @@
 		1919F1DF1C15C4D80071067A /* Macimoto */ = {
 			isa = PBXGroup;
 			children = (
+				19BE22EB1C16534700DE3A94 /* Model */,
+				19BE22EA1C16533600DE3A94 /* Misc */,
 				19D214991C160E8100941D81 /* RemoteConfigManager */,
 				19D214981C160A2500941D81 /* AppService */,
 				1919F1F21C15EC6E0071067A /* Libraries */,
 				1919F1E01C15C4D80071067A /* AppDelegate.swift */,
 				1919F1E21C15C4D80071067A /* ViewController.swift */,
-				1919F1E71C15C4D80071067A /* Assets.xcassets */,
 				1919F1E91C15C4D80071067A /* Main.storyboard */,
-				1919F1EC1C15C4D80071067A /* Info.plist */,
-				1919F1E41C15C4D80071067A /* Macimoto.xcdatamodeld */,
-				1919F1F31C15EC960071067A /* Macimoto-Bridging-Header.h */,
 				19BE22E61C164F8500DE3A94 /* MyVideosVC.swift */,
 				19BE22E81C164FAD00DE3A94 /* VideoPlayerVC.swift */,
 			);
@@ -113,6 +113,25 @@
 				1919F1F51C15EC970071067A /* KPCScaleToFillNSImageView.m */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		19BE22EA1C16533600DE3A94 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				1919F1EC1C15C4D80071067A /* Info.plist */,
+				1919F1E41C15C4D80071067A /* Macimoto.xcdatamodeld */,
+				1919F1E71C15C4D80071067A /* Assets.xcassets */,
+				1919F1F31C15EC960071067A /* Macimoto-Bridging-Header.h */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		19BE22EB1C16534700DE3A94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19BE22EC1C16537F00DE3A94 /* Animoto.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		19D214981C160A2500941D81 /* AppService */ = {
@@ -272,6 +291,7 @@
 				19BE22E91C164FAD00DE3A94 /* VideoPlayerVC.swift in Sources */,
 				19BE22D71C16412400DE3A94 /* ANUserCredentials.m in Sources */,
 				19BE22E71C164F8500DE3A94 /* MyVideosVC.swift in Sources */,
+				19BE22ED1C16537F00DE3A94 /* Animoto.swift in Sources */,
 				1919F1E31C15C4D80071067A /* ViewController.swift in Sources */,
 				1919F1F61C15EC970071067A /* KPCScaleToFillNSImageView.m in Sources */,
 				1919F1E61C15C4D80071067A /* Macimoto.xcdatamodeld in Sources */,
