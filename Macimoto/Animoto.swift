@@ -12,8 +12,8 @@ import Alamofire
 struct Animoto {
   enum Router: URLRequestConvertible {
     static let baseURLString = "https://app-service-qa.animoto.com"
-    static let clientID = "iphone"
-    static let clientSecret = "iphone2secret"
+    static let clientID = "web"
+    static let clientSecret = "web2secret"
     
     case Authenticate
     

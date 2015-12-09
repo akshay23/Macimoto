@@ -72,7 +72,9 @@ class MyVideosVC: NSViewController {
                   videoDate = format["created_at"].stringValue
                 }
               }
-              self.videos.append((videoTitle, videoDescription, videoDate, videoUser, videoThumbnail, videoURL))
+              if (videoURL != "") {
+                self.videos.append((videoTitle, videoDescription, videoDate, videoUser, videoThumbnail, videoURL))
+              }
             }
           }
           print("Number of videos: \(self.videos.count)")
