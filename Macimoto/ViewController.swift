@@ -21,6 +21,7 @@ class ViewController: NSViewController {
   @IBOutlet var loginButton: NSButton!
   @IBOutlet var checkmark1: NSImageView!
   @IBOutlet var checkmark2: NSImageView!
+  @IBOutlet var badLoginLabel: NSTextField!
   
   var oauthToken: String = ""
   var userID: Int = -1
@@ -43,7 +44,9 @@ class ViewController: NSViewController {
     // Change color of the login button text
     let pstyle = NSMutableParagraphStyle()
     pstyle.alignment = NSTextAlignment.Center
-    loginButton.attributedTitle = NSAttributedString(string: "Log In", attributes: [ NSForegroundColorAttributeName : NSColor.whiteColor(), NSParagraphStyleAttributeName : pstyle, NSFontAttributeName : NSFont.systemFontOfSize(16) ])
+    loginButton.attributedTitle = NSAttributedString(string: "Log In", attributes: [NSForegroundColorAttributeName: NSColor.whiteColor(),
+      NSParagraphStyleAttributeName: pstyle, NSFontAttributeName: NSFont.systemFontOfSize(16)])
+    loginButton.keyEquivalent = "\r"
     
     // Focus on username box
     passwordTxt.resignFirstResponder()
@@ -58,6 +61,7 @@ class ViewController: NSViewController {
       let videosViewController = segue.destinationController as! MyVideosVC
       videosViewController.oauthToken = self.oauthToken
       videosViewController.userID = self.userID
+      videosViewController.loginVC = self
     }
   }
   
@@ -84,6 +88,7 @@ class ViewController: NSViewController {
 // MARK - IBActions
 extension ViewController {
   @IBAction func login(sender: AnyObject) {
+    badLoginLabel.hidden = true
     DJProgressHUD.showStatus("Loading..", fromView: view)
     
     // Validate user info
@@ -105,6 +110,8 @@ extension ViewController {
           print("User auth token is \(self.oauthToken)")
           print("User ID is \(self.userID)")
           self.performSegueWithIdentifier("unwindToVideos", sender: self)
+        } else {
+          self.badLoginLabel.hidden = false
         }
         
         DJProgressHUD.dismiss()

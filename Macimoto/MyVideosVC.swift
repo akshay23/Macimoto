@@ -16,6 +16,7 @@ class MyVideosVC: NSViewController {
   @IBOutlet var subHeader: NSView!
   @IBOutlet var videoTable: NSTableView!
   
+  var loginVC: ViewController?
   var oauthToken: String = ""
   var userID: Int = -1
   var videos: [(title: String, description: String, date: String, user: String, coverImageURL: String, videoURL: String)] = []
@@ -87,8 +88,13 @@ class MyVideosVC: NSViewController {
   }
 
   @IBAction func logout(sender: AnyObject) {
+    loginVC!.usernameTxt.stringValue = ""
+    loginVC!.passwordTxt.stringValue = ""
+    loginVC!.checkmark1.hidden = true
+    loginVC!.checkmark2.hidden = true
+    loginVC!.usernameTxt.becomeFirstResponder()
     view.removeFromSuperview()
-    self.dismissViewController(self)
+    dismissViewController(self)
   }
 }
 

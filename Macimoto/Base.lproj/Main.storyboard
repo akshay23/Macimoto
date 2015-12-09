@@ -676,10 +676,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18x-cg-91a">
-                                <rect key="frame" x="309" y="375" width="382" height="239"/>
+                                <rect key="frame" x="309" y="359" width="382" height="255"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JxP-Ba-Qi2">
-                                        <rect key="frame" x="18" y="195" width="69" height="17"/>
+                                        <rect key="frame" x="18" y="211" width="69" height="17"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Email:" id="680-d1-xtG">
                                             <font key="font" size="16" name="Copperplate-Bold"/>
@@ -688,7 +688,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBz-Vq-ieN">
-                                        <rect key="frame" x="18" y="120" width="107" height="17"/>
+                                        <rect key="frame" x="18" y="137" width="107" height="17"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Password:" id="u4E-6V-uQt">
                                             <font key="font" size="16" name="Copperplate-Bold"/>
@@ -697,7 +697,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ha-7f-MJZ">
-                                        <rect key="frame" x="20" y="169" width="309" height="23"/>
+                                        <rect key="frame" x="20" y="185" width="309" height="23"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="OhV-aU-cLF">
                                             <font key="font" size="13" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -705,8 +705,8 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-lt-YQw">
-                                        <rect key="frame" x="20" y="95" width="309" height="22"/>
+                                    <secureTextField verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-lt-YQw">
+                                        <rect key="frame" x="20" y="112" width="309" height="22"/>
                                         <animations/>
                                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Iel-4K-4bW">
                                             <font key="font" metaFont="system"/>
@@ -717,8 +717,8 @@
                                             </allowedInputSourceLocales>
                                         </secureTextFieldCell>
                                     </secureTextField>
-                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMb-7E-vcl">
-                                        <rect key="frame" x="20" y="25" width="152" height="38"/>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="DMb-7E-vcl">
+                                        <rect key="frame" x="20" y="37" width="152" height="38"/>
                                         <animations/>
                                         <buttonCell key="cell" type="smallSquare" title="Log In" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="hBg-WR-BsH">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -729,15 +729,23 @@
                                         </connections>
                                     </button>
                                     <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ZU-Hg-CJH" userLabel="Checkmark1">
-                                        <rect key="frame" x="337" y="168" width="25" height="25"/>
+                                        <rect key="frame" x="337" y="184" width="25" height="25"/>
                                         <animations/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="checkmark" id="B7r-n5-icO"/>
                                     </imageView>
                                     <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gox-nP-Ekj" userLabel="Checkmark2">
-                                        <rect key="frame" x="337" y="94" width="25" height="25"/>
+                                        <rect key="frame" x="337" y="111" width="25" height="25"/>
                                         <animations/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="checkmark" id="AaI-Gs-ROr"/>
                                     </imageView>
+                                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKR-6a-Dsq">
+                                        <rect key="frame" x="198" y="44" width="116" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Bad login info!" id="GUl-7P-kmL">
+                                            <font key="font" size="15" name="ArialRoundedMTBold"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.02534369413" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <animations/>
                             </customView>
@@ -780,6 +788,7 @@
                         <animations/>
                     </view>
                     <connections>
+                        <outlet property="badLoginLabel" destination="WKR-6a-Dsq" id="IQ6-YY-uLq"/>
                         <outlet property="checkmark1" destination="8ZU-Hg-CJH" id="JtA-Jr-d3e"/>
                         <outlet property="checkmark2" destination="Gox-nP-Ekj" id="gCa-zo-5nP"/>
                         <outlet property="credentialsView" destination="18x-cg-91a" id="jJ6-da-HEx"/>
