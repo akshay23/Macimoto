@@ -32,9 +32,6 @@ class MyVideosVC: NSViewController {
     subHeader.wantsLayer = true
     let subHeaderLayer = subHeader.layer
     subHeaderLayer?.backgroundColor = CGColorCreateGenericRGB(0, 0, 0, 1)
-    
-    // Get the data
-    getVideoData()
   }
   
   override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {

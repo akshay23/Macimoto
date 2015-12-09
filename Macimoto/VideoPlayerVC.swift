@@ -33,8 +33,16 @@ class VideoPlayerVC: NSViewController {
     
     // Show metadata
     titleTxt.stringValue = videoData.title
-    dateTxt.stringValue = videoData.date
     userTxt.stringValue = videoData.user
+    
+    let dateSplit = videoData.date.characters.split{$0 == "T"}.map(String.init)
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    let date = dateFormatter.dateFromString(dateSplit[0])
+    let dateFormatter2 = NSDateFormatter()
+    dateFormatter2.dateStyle = NSDateFormatterStyle.LongStyle
+    dateTxt.stringValue = dateFormatter2.stringFromDate(date!)
+    
     if (videoData.description != "") {
       aboutLabel.hidden = false
       aboutTxt.hidden = false

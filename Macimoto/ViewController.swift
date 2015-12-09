@@ -48,7 +48,7 @@ class ViewController: NSViewController {
     passwordTxt.resignFirstResponder()
     usernameTxt.becomeFirstResponder()
     
-    // Get OAuth token (if empty)
+    // Get OAuth token
     getOauthToken()
   }
   
@@ -58,6 +58,7 @@ class ViewController: NSViewController {
       videosViewController.oauthToken = self.oauthToken
       videosViewController.userID = self.userID
       videosViewController.loginVC = self
+      videosViewController.getVideoData()
     }
   }
   
