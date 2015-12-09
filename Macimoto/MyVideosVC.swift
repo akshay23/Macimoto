@@ -31,11 +31,8 @@ class MyVideosVC: NSViewController {
     subHeader.wantsLayer = true
     let subHeaderLayer = subHeader.layer
     subHeaderLayer?.backgroundColor = CGColorCreateGenericRGB(0, 0, 0, 1)
-  }
-  
-  override func viewDidAppear() {
-    super.viewDidAppear()
     
+    // Get the data
     getVideoData()
   }
   
