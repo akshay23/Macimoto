@@ -19,6 +19,7 @@ class MyVideosVC: NSViewController {
   var loginVC: ViewController?
   var oauthToken: String = ""
   var userID: Int = -1
+  var selectedRow = -1
   var videos: [(title: String, description: String, date: String, user: String, coverImageURL: String, videoURL: String)] = []
 
   override func viewDidLoad() {
@@ -39,7 +40,7 @@ class MyVideosVC: NSViewController {
   override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "showVideo" && segue.destinationController.isKindOfClass(VideoPlayerVC.classForCoder()) {
       let videoPlayerViewController = segue.destinationController as! VideoPlayerVC
-      videoPlayerViewController.videoData = videos[videoTable.selectedRow]
+      videoPlayerViewController.videoData = videos[selectedRow]
     }
   }
   
@@ -116,6 +117,13 @@ class MyVideosVC: NSViewController {
   @IBAction func refresh(sender: AnyObject) {
     getVideoData()
   }
+
+  @IBAction func viewVideo(sender: AnyObject) {
+    selectedRow = videoTable.rowForView(sender as! NSButton)
+    if (selectedRow < videos.count && selectedRow > -1) {
+      performSegueWithIdentifier("showVideo", sender: self)
+    }
+  }
   
 }
 
@@ -142,11 +150,6 @@ extension MyVideosVC: NSTableViewDataSource {
 }
 
 extension MyVideosVC: NSTableViewDelegate {
-  func tableViewSelectionDidChange(notification: NSNotification) {
-    if (videoTable.selectedRow < videos.count && videoTable.selectedRow > -1) {
-      performSegueWithIdentifier("showVideo", sender: self)
-    }
-  }
 }
 
 extension NSImageView {

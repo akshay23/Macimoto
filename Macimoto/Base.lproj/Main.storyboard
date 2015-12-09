@@ -901,7 +901,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="VideoCell" id="kOk-xr-cch">
-                                                            <rect key="frame" x="1" y="1" width="1000" height="200"/>
+                                                            <rect key="frame" x="1" y="1" width="1300" height="200"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-pB-qxI">
@@ -918,6 +918,16 @@
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psm-Z1-FWp">
+                                                                    <rect key="frame" x="841" y="80" width="159" height="41"/>
+                                                                    <buttonCell key="cell" type="smallSquare" title="View" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="yit-qP-hFK">
+                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                        <font key="font" size="16" name="Copperplate-Bold"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="viewVideo:" target="R8G-M0-D7p" id="Xyg-UP-XXa"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <animations/>
                                                             <connections>
