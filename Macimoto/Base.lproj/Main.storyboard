@@ -839,6 +839,16 @@
                                                     <action selector="logout:" target="R8G-M0-D7p" id="kIQ-mZ-jH9"/>
                                                 </connections>
                                             </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-oy-usd">
+                                                <rect key="frame" x="67" y="30" width="116" height="41"/>
+                                                <buttonCell key="cell" type="smallSquare" title="Refresh" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="QJf-HX-cPj">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="16" name="Copperplate-Bold"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="refresh:" target="R8G-M0-D7p" id="mKG-4N-ucS"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                     </customView>
@@ -927,7 +937,7 @@
                                 </clipView>
                                 <animations/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="szR-zA-rdf">
-                                    <rect key="frame" x="1" y="633" width="998" height="16"/>
+                                    <rect key="frame" x="1" y="-15" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
@@ -1026,97 +1036,6 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-yj-6nf">
-                                <rect key="frame" x="753" y="324" width="53" height="51"/>
-                                <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="twitter" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="T8V-HU-cmK">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="miniSystem"/>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-kB-fMk">
-                                <rect key="frame" x="816" y="394" width="53" height="49"/>
-                                <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="youtube" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="EQx-lN-U5L">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="miniSystem"/>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3l-rF-Oty">
-                                <rect key="frame" x="816" y="324" width="53" height="51"/>
-                                <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Google+" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="yxf-3P-ViQ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="miniSystem"/>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-d4-bsU">
-                                <rect key="frame" x="753" y="394" width="53" height="49"/>
-                                <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="facebook" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="djM-3T-gIa">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="miniSystem"/>
-                                </buttonCell>
-                            </button>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0V-zB-cWM">
-                                <rect key="frame" x="736" y="449" width="127" height="28"/>
-                                <animations/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Share.." id="xHF-Uq-qLk">
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJ8-1K-bSC">
-                                <rect key="frame" x="736" y="538" width="127" height="28"/>
-                                <animations/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="By" id="c7j-Qc-Ouo">
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAc-0x-pdJ">
-                                <rect key="frame" x="736" y="259" width="127" height="28"/>
-                                <animations/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Options" id="ucq-PY-Cnj">
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3q-Tf-0on">
-                                <rect key="frame" x="753" y="234" width="589" height="17"/>
-                                <animations/>
-                                <buttonCell key="cell" type="roundTextured" title="   Edit Video" bezelStyle="texturedRounded" image="edit" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="vl2-qD-okL">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".AppleSystemUIFont"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sxa-YB-pGD">
-                                <rect key="frame" x="753" y="204" width="125" height="17"/>
-                                <animations/>
-                                <buttonCell key="cell" type="roundTextured" title="   Download" bezelStyle="texturedRounded" image="download" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="pDe-89-ATw">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IqP-yr-pE3">
-                                <rect key="frame" x="753" y="140" width="125" height="17"/>
-                                <animations/>
-                                <buttonCell key="cell" type="roundTextured" title="   Settings" bezelStyle="texturedRounded" image="settings" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="a8v-se-Ncw">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-9E-fC6">
-                                <rect key="frame" x="753" y="171" width="125" height="17"/>
-                                <animations/>
-                                <buttonCell key="cell" type="roundTextured" title="   Upgrade to HD" bezelStyle="texturedRounded" image="HD" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="rDe-Hh-KgY">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Aa-31-Kdg">
                                 <rect key="frame" x="18" y="574" width="348" height="23"/>
                                 <animations/>
@@ -1127,7 +1046,7 @@
                                 </textFieldCell>
                             </textField>
                             <avPlayerView fixedFrame="YES" controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="o5P-sf-fhC">
-                                <rect key="frame" x="20" y="147" width="702" height="419"/>
+                                <rect key="frame" x="20" y="147" width="757" height="419"/>
                                 <animations/>
                             </avPlayerView>
                             <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyC-It-fNJ">
@@ -1139,20 +1058,20 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView hidden="YES" fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIv-lq-rgO">
-                                <rect key="frame" x="20" y="20" width="702" height="93"/>
+                                <rect key="frame" x="20" y="20" width="757" height="93"/>
                                 <clipView key="contentView" ambiguous="YES" id="ASi-T8-65y">
-                                    <rect key="frame" x="1" y="1" width="700" height="91"/>
+                                    <rect key="frame" x="1" y="1" width="755" height="91"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView ambiguous="YES" editable="NO" selectable="NO" importsGraphics="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="UgD-5O-uvT">
-                                            <rect key="frame" x="0.0" y="0.0" width="700" height="91"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="755" height="91"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="700" height="91"/>
-                                            <size key="maxSize" width="715" height="10000000"/>
+                                            <size key="minSize" width="755" height="91"/>
+                                            <size key="maxSize" width="755" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="700" height="91"/>
-                                            <size key="maxSize" width="715" height="10000000"/>
+                                            <size key="minSize" width="755" height="91"/>
+                                            <size key="maxSize" width="755" height="10000000"/>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1161,13 +1080,104 @@
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ZKp-cw-i8R">
-                                    <rect key="frame" x="685" y="1" width="16" height="91"/>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="ZKp-cw-i8R">
+                                    <rect key="frame" x="740" y="1" width="16" height="91"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-yj-6nf">
+                                <rect key="frame" x="808" y="324" width="53" height="51"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="twitter" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="T8V-HU-cmK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-kB-fMk">
+                                <rect key="frame" x="871" y="394" width="53" height="49"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="youtube" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="EQx-lN-U5L">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3l-rF-Oty">
+                                <rect key="frame" x="871" y="324" width="53" height="51"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Google+" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="yxf-3P-ViQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-d4-bsU">
+                                <rect key="frame" x="808" y="394" width="53" height="49"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="facebook" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="djM-3T-gIa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0V-zB-cWM">
+                                <rect key="frame" x="791" y="449" width="127" height="28"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Share.." id="xHF-Uq-qLk">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJ8-1K-bSC">
+                                <rect key="frame" x="791" y="538" width="127" height="28"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="By" id="c7j-Qc-Ouo">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAc-0x-pdJ">
+                                <rect key="frame" x="791" y="259" width="127" height="28"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Options" id="ucq-PY-Cnj">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3q-Tf-0on">
+                                <rect key="frame" x="808" y="234" width="589" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Edit Video" bezelStyle="texturedRounded" image="edit" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="vl2-qD-okL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".AppleSystemUIFont"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sxa-YB-pGD">
+                                <rect key="frame" x="808" y="204" width="125" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Download" bezelStyle="texturedRounded" image="download" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="pDe-89-ATw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IqP-yr-pE3">
+                                <rect key="frame" x="808" y="140" width="125" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Settings" bezelStyle="texturedRounded" image="settings" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="a8v-se-Ncw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-9E-fC6">
+                                <rect key="frame" x="808" y="171" width="125" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Upgrade to HD" bezelStyle="texturedRounded" image="HD" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="rDe-Hh-KgY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8k-3Y-SFd">
-                                <rect key="frame" x="744" y="508" width="196" height="29"/>
+                                <rect key="frame" x="799" y="508" width="196" height="29"/>
                                 <animations/>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Akshay Lehr" id="Ogw-Bu-Qoz">
                                     <font key="font" metaFont="system" size="24"/>

@@ -47,6 +47,7 @@ class MyVideosVC: NSViewController {
   }
   
   func getVideoData() {
+    videos = []
     DJProgressHUD.showStatus("Getting Videos..", fromView: view)
     
     let request = Animoto.Router.requestProjectsWithPageNumber(userID, page: 1)
@@ -79,9 +80,27 @@ class MyVideosVC: NSViewController {
               self.videos.append((videoTitle, videoDescription, videoDate, videoUser, videoThumbnail, videoURL))
             }
           }
-          self.videoTable.reloadData()
+          print("Number of videos: \(self.videos.count)")
+          
+          if (self.videos.count > 0) {
+            self.videoTable.reloadData()
+          } else {
+            let alert = NSAlert()
+            alert.addButtonWithTitle("OK")
+            alert.informativeText = "There are no videos for this user."
+            alert.messageText = "No Videos"
+            alert.alertStyle = NSAlertStyle.WarningAlertStyle
+            alert.runModal()
+          }
+        } else {
+          let alert = NSAlert()
+          alert.addButtonWithTitle("OK")
+          alert.informativeText = "Could not get videos. Please try again."
+          alert.messageText = "Error Loading Videos"
+          alert.alertStyle = NSAlertStyle.CriticalAlertStyle
+          alert.runModal()
         }
-        
+
         DJProgressHUD.dismiss()
     }
 
@@ -96,6 +115,11 @@ class MyVideosVC: NSViewController {
     view.removeFromSuperview()
     dismissViewController(self)
   }
+  
+  @IBAction func refresh(sender: AnyObject) {
+    getVideoData()
+  }
+  
 }
 
 extension MyVideosVC: NSTableViewDataSource {
