@@ -1120,7 +1120,7 @@
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0V-zB-cWM">
                                 <rect key="frame" x="791" y="449" width="127" height="28"/>
                                 <animations/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Share.." id="xHF-Uq-qLk">
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Share" id="xHF-Uq-qLk">
                                     <font key="font" metaFont="system" size="16"/>
                                     <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
