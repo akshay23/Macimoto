@@ -66,7 +66,7 @@ class MyVideosVC: NSViewController {
               let videoTitle = video["title"].stringValue
               let videoDescription = video["description"].stringValue
               let videoUser = video["producer"].stringValue
-              let videoThumbnail = video["links"]["thumbnail_image"].stringValue
+              let videoThumbnail = video["links"]["thumbnail_image"].stringValue.stringByReplacingOccurrencesOfString("cover_224x126.jpg", withString: "cover_432x240.jpg")
               let videoFormats = video["video_formats"].arrayValue
               for format in videoFormats {
                 if (format["purpose"].stringValue == "final" && videoURL == "") {
@@ -128,7 +128,7 @@ extension MyVideosVC: NSTableViewDataSource {
   }
   
   func tableView(tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-    return 100
+    return 200
   }
   
   func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {

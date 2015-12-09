@@ -42,10 +42,6 @@ class ViewController: NSViewController {
     credentialsLayer?.backgroundColor = CGColorCreateGenericRGB(255, 255, 255, 1)
     
     // Change color of the login button text
-    let pstyle = NSMutableParagraphStyle()
-    pstyle.alignment = NSTextAlignment.Center
-    loginButton.attributedTitle = NSAttributedString(string: "Log In", attributes: [NSForegroundColorAttributeName: NSColor.whiteColor(),
-      NSParagraphStyleAttributeName: pstyle, NSFontAttributeName: NSFont.systemFontOfSize(16)])
     loginButton.keyEquivalent = "\r"
     
     // Focus on username box

@@ -654,10 +654,10 @@
                     <window key="window" title="Animoto" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="381" y="119" width="1000" height="800"/>
+                        <rect key="contentRect" x="215" y="94" width="1300" height="850"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="1000" height="800"/>
-                        <value key="maxSize" type="size" width="1000" height="800"/>
+                        <value key="minSize" type="size" width="1300" height="850"/>
+                        <value key="maxSize" type="size" width="1300" height="850"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -672,11 +672,48 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" userLabel="Login View Controller" customClass="ViewController" customModule="Macimoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1300" height="850"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGy-Uu-0an">
+                                <rect key="frame" x="0.0" y="750" width="1300" height="100"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zn-Zd-dM2" customClass="KPCScaleToFillNSImageView">
+                                        <rect key="frame" x="-3" y="0.0" width="1300" height="100"/>
+                                        <animations/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="HeaderBG" id="gFC-fK-DSm"/>
+                                    </imageView>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmo-jJ-Gfc">
+                                        <rect key="frame" x="420" y="0.0" width="474" height="100"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-wJ-Hry">
+                                                <rect key="frame" x="55" y="-4" width="326" height="109"/>
+                                                <animations/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AnimotoLogo" id="Oep-Yd-kLA"/>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                    </customView>
+                                </subviews>
+                                <animations/>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mul-Eh-1rm">
+                                <rect key="frame" x="0.0" y="701" width="1300" height="50"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfy-fp-mP8">
+                                        <rect key="frame" x="563" y="10" width="174" height="30"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Log In" id="bW4-F6-uSr">
+                                            <font key="font" size="24" name="Copperplate"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <animations/>
+                            </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18x-cg-91a">
-                                <rect key="frame" x="309" y="359" width="382" height="255"/>
+                                <rect key="frame" x="459" y="409" width="382" height="255"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JxP-Ba-Qi2">
                                         <rect key="frame" x="18" y="211" width="69" height="17"/>
@@ -749,41 +786,6 @@
                                 </subviews>
                                 <animations/>
                             </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGy-Uu-0an">
-                                <rect key="frame" x="0.0" y="700" width="1000" height="100"/>
-                                <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zn-Zd-dM2" customClass="KPCScaleToFillNSImageView">
-                                        <rect key="frame" x="-3" y="0.0" width="1003" height="100"/>
-                                        <animations/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="HeaderBG" id="gFC-fK-DSm"/>
-                                    </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-wJ-Hry">
-                                        <rect key="frame" x="326" y="-4" width="326" height="109"/>
-                                        <animations/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AnimotoLogo" id="Oep-Yd-kLA"/>
-                                    </imageView>
-                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmo-jJ-Gfc">
-                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="100"/>
-                                        <animations/>
-                                    </customView>
-                                </subviews>
-                                <animations/>
-                            </customView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mul-Eh-1rm">
-                                <rect key="frame" x="0.0" y="651" width="1000" height="50"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfy-fp-mP8">
-                                        <rect key="frame" x="413" y="12" width="174" height="30"/>
-                                        <animations/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Log In" id="bW4-F6-uSr">
-                                            <font key="font" size="24" name="Copperplate"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                </subviews>
-                                <animations/>
-                            </customView>
                         </subviews>
                         <animations/>
                     </view>
@@ -802,34 +804,34 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1044" y="1266"/>
+            <point key="canvasLocation" x="-1035" y="1291"/>
         </scene>
         <!--Dashboard View Controller-->
         <scene sceneID="Kez-ac-gC8">
             <objects>
                 <viewController id="R8G-M0-D7p" userLabel="Dashboard View Controller" customClass="MyVideosVC" customModule="Macimoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="npi-9c-hco">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1300" height="850"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d88-5J-RvF">
-                                <rect key="frame" x="0.0" y="700" width="1000" height="100"/>
+                                <rect key="frame" x="0.0" y="750" width="1300" height="100"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMJ-cH-Ple" customClass="KPCScaleToFillNSImageView">
-                                        <rect key="frame" x="-3" y="0.0" width="1003" height="100"/>
+                                        <rect key="frame" x="-3" y="0.0" width="1303" height="100"/>
                                         <animations/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="HeaderBG" id="jtA-sO-yea"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2x-r7-2Id">
-                                        <rect key="frame" x="326" y="-4" width="326" height="109"/>
+                                        <rect key="frame" x="474" y="-4" width="326" height="109"/>
                                         <animations/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AnimotoLogo" id="DJf-re-ojp"/>
                                     </imageView>
                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KnN-n0-7fd">
-                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1300" height="100"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hug-RS-hFG">
-                                                <rect key="frame" x="800" y="30" width="116" height="41"/>
+                                                <rect key="frame" x="1029" y="30" width="116" height="41"/>
                                                 <animations/>
                                                 <buttonCell key="cell" type="smallSquare" title="Log out" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="bT5-px-ZgU">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -840,7 +842,7 @@
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BuM-oy-usd">
-                                                <rect key="frame" x="67" y="30" width="116" height="41"/>
+                                                <rect key="frame" x="142" y="30" width="116" height="41"/>
                                                 <buttonCell key="cell" type="smallSquare" title="Refresh" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="QJf-HX-cPj">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="16" name="Copperplate-Bold"/>
@@ -856,10 +858,10 @@
                                 <animations/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DR7-EG-LIG">
-                                <rect key="frame" x="0.0" y="651" width="1000" height="50"/>
+                                <rect key="frame" x="0.0" y="701" width="1300" height="50"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuW-HG-8mJ">
-                                        <rect key="frame" x="413" y="12" width="174" height="30"/>
+                                        <rect key="frame" x="563" y="10" width="174" height="30"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="My Videos" id="P6K-Gb-byU">
                                             <font key="font" size="23" name="Copperplate"/>
@@ -871,13 +873,13 @@
                                 <animations/>
                             </customView>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="1002" horizontalPageScroll="10" verticalLineScroll="1002" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNT-5h-8XU">
-                                <rect key="frame" x="0.0" y="0.0" width="1000" height="650"/>
+                                <rect key="frame" x="0.0" y="-148" width="1300" height="850"/>
                                 <clipView key="contentView" ambiguous="YES" id="Oum-4K-ByO">
-                                    <rect key="frame" x="1" y="1" width="998" height="648"/>
+                                    <rect key="frame" x="1" y="1" width="1298" height="848"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView hidden="YES" canDrawConcurrently="YES" focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="1000" viewBased="YES" floatsGroupRows="NO" id="JHf-kL-1KQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="998" height="648"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1298" height="848"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -885,7 +887,7 @@
                                             <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="995" minWidth="40" maxWidth="1000" id="c9M-k3-yE0">
+                                                <tableColumn width="1000" minWidth="40" maxWidth="1000" id="c9M-k3-yE0">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -899,19 +901,19 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="VideoCell" id="kOk-xr-cch">
-                                                            <rect key="frame" x="1" y="1" width="995" height="60"/>
+                                                            <rect key="frame" x="1" y="1" width="1000" height="200"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-pB-qxI">
-                                                                    <rect key="frame" x="3" y="-33" width="148" height="90"/>
+                                                                    <rect key="frame" x="3" y="3" width="332" height="194"/>
                                                                     <animations/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="4Hg-yS-yFI"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xy9-kv-2mj">
-                                                                    <rect key="frame" x="162" y="0.0" width="397" height="24"/>
+                                                                    <rect key="frame" x="375" y="85" width="467" height="31"/>
                                                                     <animations/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Dx1-Y0-5al">
-                                                                        <font key="font" size="20" name=".HelveticaNeueDeskInterface-Regular"/>
+                                                                        <font key="font" size="26" name=".HelveticaNeueDeskInterface-Regular"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
@@ -937,7 +939,7 @@
                                 </clipView>
                                 <animations/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="szR-zA-rdf">
-                                    <rect key="frame" x="1" y="-15" width="0.0" height="16"/>
+                                    <rect key="frame" x="1" y="633" width="998" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
@@ -958,45 +960,34 @@
                 </viewController>
                 <customObject id="FIA-vW-YBg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="99" y="1266"/>
+            <point key="canvasLocation" x="395" y="1291"/>
         </scene>
         <!--Video PlayerVC-->
         <scene sceneID="hkt-U9-DzG">
             <objects>
                 <viewController id="lj3-g1-pam" customClass="VideoPlayerVC" customModule="Macimoto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="x54-KY-Vw9">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1300" height="850"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JlV-KK-8HI">
-                                <rect key="frame" x="0.0" y="700" width="1000" height="100"/>
+                                <rect key="frame" x="0.0" y="750" width="1300" height="100"/>
                                 <subviews>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utq-E6-hHp" customClass="KPCScaleToFillNSImageView">
-                                        <rect key="frame" x="-3" y="0.0" width="1003" height="100"/>
+                                        <rect key="frame" x="-3" y="0.0" width="1303" height="100"/>
                                         <animations/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="HeaderBG" id="z8S-t5-TGU"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csK-qD-hsp">
-                                        <rect key="frame" x="326" y="-4" width="326" height="109"/>
+                                        <rect key="frame" x="462" y="-4" width="326" height="109"/>
                                         <animations/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AnimotoLogo" id="jhB-yw-ovv"/>
                                     </imageView>
                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ge0-8X-4ba">
-                                        <rect key="frame" x="0.0" y="-4" width="1000" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1300" height="100"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-sg-lhV">
-                                                <rect key="frame" x="80" y="30" width="116" height="41"/>
-                                                <animations/>
-                                                <buttonCell key="cell" type="smallSquare" title="My Videos" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="HyV-xu-evK">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" size="16" name="Copperplate-Bold"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="backToVideos:" target="lj3-g1-pam" id="yXw-2e-Tzd"/>
-                                                </connections>
-                                            </button>
                                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="csk-7r-Xy7">
-                                                <rect key="frame" x="800" y="30" width="116" height="41"/>
+                                                <rect key="frame" x="1013" y="30" width="116" height="41"/>
                                                 <animations/>
                                                 <buttonCell key="cell" type="smallSquare" title="Log out" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="RVc-B9-Mbu">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1006,6 +997,17 @@
                                                     <action selector="backToVideos:" target="lj3-g1-pam" id="lEt-0g-cOa"/>
                                                 </connections>
                                             </button>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-sg-lhV">
+                                                <rect key="frame" x="128" y="30" width="116" height="41"/>
+                                                <animations/>
+                                                <buttonCell key="cell" type="smallSquare" title="My Videos" bezelStyle="smallSquare" image="teal" imagePosition="overlaps" alignment="center" borderStyle="border" inset="2" id="HyV-xu-evK">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="16" name="Copperplate-Bold"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="backToVideos:" target="lj3-g1-pam" id="yXw-2e-Tzd"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <animations/>
                                     </customView>
@@ -1013,10 +1015,10 @@
                                 <animations/>
                             </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYb-CR-qV1">
-                                <rect key="frame" x="0.0" y="651" width="1000" height="50"/>
+                                <rect key="frame" x="0.0" y="701" width="1300" height="50"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEJ-VY-fwb">
-                                        <rect key="frame" x="413" y="12" width="174" height="30"/>
+                                        <rect key="frame" x="563" y="10" width="174" height="30"/>
                                         <animations/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Video Player" id="6Gq-gJ-M9d">
                                             <font key="font" size="23" name="Copperplate"/>
@@ -1028,7 +1030,7 @@
                                 <animations/>
                             </customView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bhd-0W-ldg">
-                                <rect key="frame" x="18" y="602" width="706" height="31"/>
+                                <rect key="frame" x="18" y="652" width="845" height="31"/>
                                 <animations/>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="TITLE" id="ccl-zT-Avo">
                                     <font key="font" metaFont="system" size="26"/>
@@ -1036,8 +1038,99 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-yj-6nf">
+                                <rect key="frame" x="1110" y="374" width="53" height="51"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="twitter" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="T8V-HU-cmK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-kB-fMk">
+                                <rect key="frame" x="1173" y="444" width="53" height="49"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="youtube" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="EQx-lN-U5L">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3l-rF-Oty">
+                                <rect key="frame" x="1173" y="374" width="53" height="51"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Google+" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="yxf-3P-ViQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-d4-bsU">
+                                <rect key="frame" x="1110" y="444" width="53" height="49"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="facebook" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="djM-3T-gIa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0V-zB-cWM">
+                                <rect key="frame" x="1093" y="499" width="127" height="28"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Share" id="xHF-Uq-qLk">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJ8-1K-bSC">
+                                <rect key="frame" x="1093" y="588" width="127" height="28"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="By" id="c7j-Qc-Ouo">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAc-0x-pdJ">
+                                <rect key="frame" x="1093" y="309" width="127" height="28"/>
+                                <animations/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Options" id="ucq-PY-Cnj">
+                                    <font key="font" metaFont="system" size="16"/>
+                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3q-Tf-0on">
+                                <rect key="frame" x="1110" y="284" width="589" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Edit Video" bezelStyle="texturedRounded" image="edit" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="vl2-qD-okL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".AppleSystemUIFont"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sxa-YB-pGD">
+                                <rect key="frame" x="1110" y="254" width="125" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Download" bezelStyle="texturedRounded" image="download" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="pDe-89-ATw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IqP-yr-pE3">
+                                <rect key="frame" x="1110" y="190" width="125" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Settings" bezelStyle="texturedRounded" image="settings" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="a8v-se-Ncw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-9E-fC6">
+                                <rect key="frame" x="1110" y="221" width="125" height="17"/>
+                                <animations/>
+                                <buttonCell key="cell" type="roundTextured" title="   Upgrade to HD" bezelStyle="texturedRounded" image="HD" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="rDe-Hh-KgY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Aa-31-Kdg">
-                                <rect key="frame" x="18" y="574" width="348" height="23"/>
+                                <rect key="frame" x="18" y="624" width="348" height="23"/>
                                 <animations/>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Date" id="dIj-nk-0zf">
                                     <font key="font" size="15" name=".HelveticaNeueDeskInterface-Regular"/>
@@ -1046,32 +1139,24 @@
                                 </textFieldCell>
                             </textField>
                             <avPlayerView fixedFrame="YES" controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="o5P-sf-fhC">
-                                <rect key="frame" x="20" y="147" width="757" height="419"/>
+                                <rect key="frame" x="20" y="121" width="1047" height="495"/>
                                 <animations/>
                             </avPlayerView>
-                            <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyC-It-fNJ">
-                                <rect key="frame" x="18" y="112" width="98" height="24"/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="About" id="M3G-0a-ObU">
-                                    <font key="font" size="17" name=".HelveticaNeueDeskInterface-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <scrollView hidden="YES" fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIv-lq-rgO">
-                                <rect key="frame" x="20" y="20" width="757" height="93"/>
+                                <rect key="frame" x="20" y="20" width="1047" height="70"/>
                                 <clipView key="contentView" ambiguous="YES" id="ASi-T8-65y">
-                                    <rect key="frame" x="1" y="1" width="755" height="91"/>
+                                    <rect key="frame" x="1" y="1" width="1045" height="68"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView ambiguous="YES" editable="NO" selectable="NO" importsGraphics="NO" findStyle="panel" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="UgD-5O-uvT">
-                                            <rect key="frame" x="0.0" y="0.0" width="755" height="91"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1045" height="68"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="755" height="91"/>
-                                            <size key="maxSize" width="755" height="10000000"/>
+                                            <size key="minSize" width="1045" height="68"/>
+                                            <size key="maxSize" width="1045" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="755" height="91"/>
-                                            <size key="maxSize" width="755" height="10000000"/>
+                                            <size key="minSize" width="1045" height="68"/>
+                                            <size key="maxSize" width="1045" height="10000000"/>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1081,107 +1166,24 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="ZKp-cw-i8R">
-                                    <rect key="frame" x="740" y="1" width="16" height="91"/>
+                                    <rect key="frame" x="1030" y="1" width="16" height="68"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-yj-6nf">
-                                <rect key="frame" x="808" y="324" width="53" height="51"/>
-                                <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="twitter" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="T8V-HU-cmK">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="miniSystem"/>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHn-kB-fMk">
-                                <rect key="frame" x="871" y="394" width="53" height="49"/>
-                                <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="youtube" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="EQx-lN-U5L">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="miniSystem"/>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3l-rF-Oty">
-                                <rect key="frame" x="871" y="324" width="53" height="51"/>
-                                <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Google+" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="yxf-3P-ViQ">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="miniSystem"/>
-                                </buttonCell>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwm-d4-bsU">
-                                <rect key="frame" x="808" y="394" width="53" height="49"/>
-                                <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="facebook" imagePosition="overlaps" alignment="center" controlSize="mini" imageScaling="proportionallyUpOrDown" inset="2" id="djM-3T-gIa">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="miniSystem"/>
-                                </buttonCell>
-                            </button>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l0V-zB-cWM">
-                                <rect key="frame" x="791" y="449" width="127" height="28"/>
-                                <animations/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Share" id="xHF-Uq-qLk">
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJ8-1K-bSC">
-                                <rect key="frame" x="791" y="538" width="127" height="28"/>
-                                <animations/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="By" id="c7j-Qc-Ouo">
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KAc-0x-pdJ">
-                                <rect key="frame" x="791" y="259" width="127" height="28"/>
-                                <animations/>
-                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Options" id="ucq-PY-Cnj">
-                                    <font key="font" metaFont="system" size="16"/>
-                                    <color key="textColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3q-Tf-0on">
-                                <rect key="frame" x="808" y="234" width="589" height="17"/>
-                                <animations/>
-                                <buttonCell key="cell" type="roundTextured" title="   Edit Video" bezelStyle="texturedRounded" image="edit" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="vl2-qD-okL">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="13" name=".AppleSystemUIFont"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sxa-YB-pGD">
-                                <rect key="frame" x="808" y="204" width="125" height="17"/>
-                                <animations/>
-                                <buttonCell key="cell" type="roundTextured" title="   Download" bezelStyle="texturedRounded" image="download" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="pDe-89-ATw">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IqP-yr-pE3">
-                                <rect key="frame" x="808" y="140" width="125" height="17"/>
-                                <animations/>
-                                <buttonCell key="cell" type="roundTextured" title="   Settings" bezelStyle="texturedRounded" image="settings" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="a8v-se-Ncw">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-9E-fC6">
-                                <rect key="frame" x="808" y="171" width="125" height="17"/>
-                                <animations/>
-                                <buttonCell key="cell" type="roundTextured" title="   Upgrade to HD" bezelStyle="texturedRounded" image="HD" imagePosition="left" alignment="left" controlSize="mini" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="rDe-Hh-KgY">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8k-3Y-SFd">
-                                <rect key="frame" x="799" y="508" width="196" height="29"/>
+                                <rect key="frame" x="1101" y="558" width="196" height="29"/>
                                 <animations/>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Akshay Lehr" id="Ogw-Bu-Qoz">
                                     <font key="font" metaFont="system" size="24"/>
                                     <color key="textColor" red="1" green="0.33798623249999998" blue="0.03739078169" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField hidden="YES" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cyC-It-fNJ">
+                                <rect key="frame" x="18" y="89" width="98" height="24"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="About" id="M3G-0a-ObU">
+                                    <font key="font" size="17" name=".HelveticaNeueDeskInterface-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -1201,7 +1203,7 @@
                 </viewController>
                 <customObject id="ffE-Gx-u2T" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1240" y="1266"/>
+            <point key="canvasLocation" x="1821" y="1291"/>
         </scene>
     </scenes>
     <resources>
